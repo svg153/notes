@@ -7,7 +7,7 @@ Dos modos de uso del cerebro:
 
 Hemos evolucionado para solucionar problemas complejos.
 
-Procastinación
+Procrastinación
 
 Cunado tienes que aprender, lo mas importante es empezar. Romper esa barrera.
 Efectos a largo son malos.
@@ -15,7 +15,7 @@ Efectos a largo son malos.
 El cerebro se resiste a hacer cosas nuevas:
 
 - El cerebro va a intentar llevar tu atención a otra cosa
-  - Todos procastinamos, pero se diferencia en como lo gestionan
+  - Todos procrastinamos, pero se diferencia en como lo gestionan
     - Técnica pomodoro:
     - Técnica de los 5 minutos:
 - Cuando hacemos algo que no nos gusta, el cerebro se activa la zona del dolor, pero al poco desaparee
@@ -117,7 +117,7 @@ Zombies: estas en modo incosciente y hacer que tus habitos trabaje para ti
 
 Juggling life and learning
 
-- Crear la lista de tareas ayuda a descargar la cowrking memory
+- Crear la lista de tareas ayuda a descargar la coworking memory
   - Agenda, checklist, recordatorios, etc. para que descargas tu zona de trabajo
   - Experimento de los camareros
     - Lo tiene en la memoria de trabajo, pero cunado da la comanda se le olvida.
