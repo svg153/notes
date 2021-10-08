@@ -60,9 +60,9 @@ Cuando tienes varias regiones pones un balanceador global de carga encima de esa
   - Lo bueno que tiene que vale para muchos sistemas y conectarlos.
   - 3 niveles (decide ownership and behavior): cloud providers control plane, terraform module, HCL files.
 
-> *When you say infrastructure is code and you own the resource, then you code is nothing more a mere sugestion and you are going to lose the synchrony between your logic and the actual logic of your provider*
+> _When you say infrastructure is code and you own the resource, then you code is nothing more a mere sugestion and you are going to lose the synchrony between your logic and the actual logic of your provider_
 
-Kubernetes se basa en la **Promised Theory**, *Tell me what you want and I will do whatever it takes to get you there*
+Kubernetes se basa en la **Promised Theory**, _Tell me what you want and I will do whatever it takes to get you there_
 
 En Kubernetes, no necesitas escribir código (porque existen unos controladores que poseen toda la lógica y si no, lo puedes implementar tú "custom resource definition") solo tienes que decir lo que quieres que haga (de manera de manera declarativa) y el controlador de Kubernetes lo hará, porque sabe gestionar todo lo relacionado con contenedores, desde bajarlos y rearrancarlos cuando fallan, hasta actualizarlos.
 
@@ -76,4 +76,27 @@ Al final, va a seguir terraform y demas, para crear el cluster pero no para admi
 
 ## [La polémica de Docker Desktop](https://youtu.be/e1bavPwQmVc?t=)
 
+El negocio del software se basa en tener clientes que paguen por un software, para poder pagar a los desarrolladores para que puedan seguir mejorándolo para tener mas cliente y obtener beneficios.
+
+El software libre, puedes cambiarlo y no pagar por el. Así que, las unicas maneras de que esos productos libres, sigan siendo sostenibles (añadiendo nuevas funcionalidades, arreglando errores, seguridad) es que algo o alguien subvencione o haya un modelo de negocio sostenible para seguir pagando a los desarrolladores a largo plazo.
+
+Lo que hay que poner el foco es en el roadmap de los productos para seguir pagando la suscripción o no
+
 ## [Como Kubernetes ayuda a desarrolladores a avanzar más rápido](https://youtu.be/e1bavPwQmVc?t=)
+
+¿Necesitan de verdad uqe la gente comprenda Kubernetes?
+
+- Kubernetes es como un librería para el desarrollo de la infraestructura, pero es una librería de bajo nivel. Como el tiempo la gente hará librerías de alto nivel abstrayendo y haciendo mas simple la creación de la infraestructura para los desarrolladores.
+  - Tienes librerías de mas alto nivel como Knative, Cloud Run que se enfocan en el despliegue de aplicaciones ocultando los objetos de bajo nivel.
+
+> _Use the tools you need at the layer which you work but always question are you working at the right layer_
+
+## [Como empezar en TI](https://youtu.be/e1bavPwQmVc?t=2197)
+
+Encuentra una manera de convertir el miedo en curiosidad aprendiendo cosas nuevas.
+
+Los fundamentos son muy importantes, todo lo de ahora es gracias a toda la experiencia anterior.
+
+Actualmente lo que estamos haciendo es creando experiencias para unirlas con los usuarios y recolectar datos de esa experiencia para poder mejorar esa experiencia.
+
+El resto son herramientas para llegara conseguir eso, desde los lenguajes a la infraestrcutura.
