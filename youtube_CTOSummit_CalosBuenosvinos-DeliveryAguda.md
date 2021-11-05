@@ -34,7 +34,7 @@ Obsesionarse por subir la feature / US / task a producción lo antes posible.
 1. one click deploy y rollback:
 
 - Puede tardar 15 min maximo
-- Un dev junior que acaba de entrar hoy mismo deberia hacerlo sin problema
+- Deploy hasta de un junior el primer día, si no lo hace, es problema del proceso y no de la persona...
 - Deploy automatizado sencillo y evaluar si es necesario meterte en kubernetes y demas, en funcion de como este la empresa los productos
   - **No dejarse llevar por el hype**
 - equipos pequeños que no req mucho hype, ni infra.
@@ -55,7 +55,7 @@ Obsesionarse por subir la feature / US / task a producción lo antes posible.
 - Arquitectura sin arquitectos
   > _La arquitectura es un disciplina que vive en los developers_
 - Todos en el equipo atacan y todos defienden
-  > _Todas las disciplinas necesarias viven en el equipo, pero no en personas concretas_
+  > _Todas las disciplinas (skills) necesarias viven en el equipo, pero no en personas concretas_
 
 1. Atacar el sprint
 
@@ -75,3 +75,18 @@ Standup:
 Delivery First es una actitud
 
 Como CTOs, sois responsables de liderar con el ejemplo poniendo el foco en el delivery y no en la tecnologia.
+
+## Otras
+
+what if metodologia
+
+- clientes que respondan a modelos face de delivery continua... cliente fake / Cliente VIP --> dando ventajas por ser el VIP que hace de conejillo
+
+Si solo te guias por un cliente acabas cayendo en ese solo...
+Tener una vision diferente para qeu no este sesgado,
+
+XP ---> CI, TDD, Coding standards, collective owner acceptant test....
+
+Codigo desacoplado, estrategia de control de versiones sencillo...
+
+> _No entregar lo que el cliente te pide si no lo que te necesita_
