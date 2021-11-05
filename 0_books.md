@@ -155,6 +155,53 @@ Las 5 fases del sistema GTD:
 
 [video](https://www.youtube.com/watch?v=K7gzjnXLM4Q)
 
-## Atomic Habits
+## Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
 
-[video](https://www.youtube.com/watch?v=c8jzmbR6Dhc)
+- [video](https://www.youtube.com/watch?v=c8jzmbR6Dhc)
+
+### Leyes
+
+- 1º Hazlo obvio (Señal):
+  - Ejemplo: habitación oscura, encender la luz
+  - Ten una planilla. Tiempo y lugar.
+  - Encadena hábitos.
+  - Adapta tu entorno, para tener más señales.
+  - El contexto es importante. Un habito se puede dar con una señal en un contexto y entorno.
+- 2º Hazlo atractivo (Deseo):
+  - La dopamina es el motor de la motivación.
+  - Empareja con algo bueno para generar dopamina.
+  - Rodéate de gente que haga lo mismo.
+  - Imitamos a la gente que admiramos.
+  - Crea un ritual, haz algo que te guste justo antes de algo duro.
+- 3º Acción:
+  - Seguimos la ley del mínimo esfuerzo.
+  - Adapta tu entorno para hacerlo fácil o dificil.
+  - Reduce la fricción.
+  - Hay actos que tienen impacto en el largo plazo. (Vender el coche)
+  - Los habitos ocurren en momentos decisivos, una vez empezado es más fácil seguir. A tento a ellos.
+  - La regla de los 2 minutos.
+  - Invierte en automatizar.
+  - Estandariza antes de optimizar. No se puede mejorar un hábito que no existe.
+- 4º Recompensa:
+  - El cerebro prioriza la satisfacción inmediata sobre la postergada.
+  - Lo que se recompensa inmediatamente tiende a ser repetido.
+  - Cuando dejes de hacer algo diseña una forma de verlo.
+  - Necesitas sensación de logro.
+  - Traquea tus habitos de forma visual
+  - No rompas la cadena.
+  - Nunca la rompas dos veces.
+
+### Tacticas avanzadas
+
+- Como ser experto en algo
+  - Escoge algo que se te de bien.
+  - Lageneticainfluyeperosiguehaciendofaltatrabajoduro
+- Como seguir motivado
+  - Trabaja en tu zona. Que sea un reto, pero no imposible.
+  - El mayor riesgo es el aburrimiento.
+  - Los profesional es siguen la agenda, los novatos se dejan in fluir por el estado de ánimo.
+- La parte mala de los hábitos
+  - Se hacen las cosas sin pensar.
+  - Habitos + Práctica deliberada = Maestría.
+  - Necesitas procesos de reflexión (retros, AAR, postmortems).
+  - Cuando tienes una identidad, es difícil cambiar.
