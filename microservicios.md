@@ -36,13 +36,13 @@ una arquitectura de microservicios:
 
 Roadmap
 
-- Elegir una que esté bastante desacopladas del monolito, no requieran cambios en muchas aplicaciones orientadas al cliente que actualmente usan el monolito y posiblemente no necesitan un almacén de datos. Esten en le borde de la applicacion.
+- Elegir una que esté bastante desacopladas del monolito, no requieran cambios en muchas aplicaciones orientadas al cliente que actualmente usan el monolito y posiblemente no necesitan un almacén de datos. Esten en le borde de la aplicacion.
   - Con el objetivo de practicar
 
 > Como principio fundamental, los equipos de entrega deben minimizar las dependencias de los microservicios recién formados con el monolito.
 
-En los casos en los que un nuevo servicio termina con una llamada al monolito, sugiero exponer una nueva API del monolito y acceder a la API a través de un método anticorrupción.capa en el nuevo servicio para asegurarse de que los conceptos de monolito no se filtren.
+En los casos en los que un nuevo servicio termina con una llamada al monolito, sugiero exponer una nueva API del monolito y acceder a la API a través de un método anticorrupción. Capa en el nuevo servicio para asegurarse de que los conceptos de monolito no se filtren.
 
-> El principal impulsor de las capacidades de desacoplamiento de un monolito es poder liberarlas de forma independiente. Este primer principio debe guiar todas las decisiones que tomen los desarrolladores sobre cómo realizar el desacoplamiento. Un sistema monolítico a menudo se compone de capas estrechamente integradas o incluso de varios sistemas que deben liberarse juntos y tienen interdependencias frágiles.
+El principal impulsor de las capacidades de desacoplamiento de un monolito es poder liberarlas de forma independiente. Este primer principio debe guiar todas las decisiones que tomen los desarrolladores sobre cómo realizar el desacoplamiento. Un sistema monolítico a menudo se compone de capas estrechamente integradas o incluso de varios sistemas que deben liberarse juntos y tienen interdependencias frágiles.
 
-> La mayoría de los intentos de desacoplamiento comienzan con la extracción de los componentes orientados al usuario y algunos servicios de fachada para proporcionar API amigables para el desarrollador para las interfaces de usuario modernas, mientras que los datos permanecen bloqueados en un esquema y sistema de almacenamiento.
+La mayoría de los intentos de desacoplamiento comienzan con la extracción de los componentes orientados al usuario y algunos servicios de fachada para proporcionar API amigables para el desarrollador para las interfaces de usuario modernas, mientras que los datos permanecen bloqueados en un esquema y sistema de almacenamiento.
