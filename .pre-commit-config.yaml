@@ -6,6 +6,7 @@ repos:
   hooks:
     - id: check-added-large-files
     - id: check-json
+      exclude: '.vscode/'
     - id: check-merge-conflict
     - id: check-yaml
     - id: end-of-file-fixer
