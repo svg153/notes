@@ -22,7 +22,7 @@ No te sirve para hacer bypass
 
 ### Demo
 
-Las capabilities estan en el `/proc/<ID_CONT>/status`
+Las capabilities están en el `/proc/<ID_CONT>/status`
 
 ```bash
 capsh --decode
@@ -32,18 +32,18 @@ docker / podman effectiveCaps
 
 En el 20min
 
-- En container que no sea root. Cuando tu app necesita caps, hay que ejecutarlo en el run con la capbility correcpondiente -> las ambient caps pero kubernetes no lo permite. ¿Como lo hacemos? ---> Con el la del file camps
+- En container que no sea root. Cuando tu app necesita caps, hay que ejecutarlo en el run con la capability correspondiente -> las ambient caps pero kubernetes no lo permite. ¿Como lo hacemos? ---> Con el la del file camps
 
-> No puedes tener el puerto en el 80 porque no tienes esa cap en el efective
+> No puedes tener el puerto en el 80 porque no tienes esa cap en el effective
 
 ### Secure Computing (seccomp)
 
 - Decidir que syscalls puede hacer la app
 - Requiere conocer cosas de bajo nivel -> strace
-- A nivel de podman hay una manera de hacerlo automatico, pero tienes que probar todo para no dejarte nada porque si no no te va a dejar usarla en ejecución
-- Hay diferentes prefiles para run o crun.
+- A nivel de `podman` hay una manera de hacerlo automático, pero tienes que probar todo para no dejarte nada porque si no no te va a dejar usarla en ejecución
+- Hay diferentes perfiles para run o crun.
 
-### Demo de seccomp
+### Demo de `seccomp`
 
 Generar un perfil y aplicarlo y probar que falla con otras
 
@@ -51,20 +51,20 @@ Generar un perfil y aplicarlo y probar que falla con otras
 
 - User namespaces -> no tienen nada que ver con los namespaces de kubernetes
   - El contenedor se ejecuta como root pero
-  - slinux ayuda a prevenir que puede ahcer el usuario
-- A nivel de programación hay librerias qeu te permite solo cogerlas en el momento que la necesitan, la cogen y la quitan. Peo tienen que estar para poder cogerla, pero luego durante el resto del timepo no puede.
-- SecurityContext configure AllowPriviliegeEscalation
+  - `slinux` ayuda a prevenir que puede hacer el usuario
+- A nivel de programación hay librerías qeu te permite solo cogerlas en el momento que la necesitan, la cogen y la quitan. Peo tienen que estar para poder cogerla, pero luego durante el resto del tiempo no puede.
+- SecurityContext configure `AllowPriviliegeEscalation`
 
 ### Demo de caps in kubernetes
 
-- La cap de ambiente esta siempre vacia porque por ahora no lo permite
+- La cap de ambiente esta siempre vaciá porque por ahora no lo permite
 - en el 40min -> deploy con el drop de caps
 - en el 42min -> pone la cap en el fichero
 
 ## Seccomp in Kubernetes
 
-- /var/lib/kubelet/seccomp
-- Kube 1.22 feature, perfil reducira las syscall per defecto
+- `/var/lib/kubelet/seccomp`
+- Kubernetes 1.22 feature, perfil reducirá las syscall per defecto
 
 ### Demo Seccomp in Kubernetes
 
@@ -74,4 +74,4 @@ Generar un perfil y aplicarlo y probar que falla con otras
 
 - PodSecurityPolicies
   - PodSecurityAdmission lo remplaza
-  - Tambien hay gente que usa GateKeeper (OpenPolicityAgent) y SCC de openshift
+  - También hay gente que usa GateKeeper (Open Policy Agent, OPA) y SCC de Openshift

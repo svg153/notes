@@ -1,6 +1,6 @@
 # [dockerCon 17 EU - Taking Docker to production](https://www.youtube.com/watch?v=V4f_sHTzvCI)
 
-## [Legacy apps wirk in containers too](https://speakerdeck.com/bretfisher/road-to-docker-production-what-you-need-to-know-and-decide?slide=9)
+## [Legacy apps work in containers too](https://speakerdeck.com/bretfisher/road-to-docker-production-what-you-need-to-know-and-decide?slide=9)
 
 - Microservices conversion is not required
 - [12 factor is a horizon we're always chasing](https://12factor.net/)
@@ -13,25 +13,25 @@
   - logs and all things stdout & stderr
   - documented in file
   - work with others
-  - lean -> usa lo que la base que tengas en el porjecto no te vayas a alpine (no lo necesitas en desde el primer día y puede ser que no lo necesites)
+  - lean -> usa lo que la base que tengas en el proyecto no te vayas a alpine (no lo necesitas en desde el primer día y puede ser que no lo necesites)
   - scale -> que la app puede correr en multiples contenedores al mismo tiempo
 
 ## [Dockerfiles: Anti-pattern](https://speakerdeck.com/bretfisher/road-to-docker-production-what-you-need-to-know-and-decide?slide=16)
 
 - Trapping data
-  - Define VOLUME for eatch location
+  - Define VOLUME for each location
 - Using: latest
   - Use specific FROM tags
   - Specify version for critical apt/yum/apk packages
 - Leaving Default Config
   - Update default config via ENV, RUN, ENTRYPOINT
-- Enviroment Specific
-  - PROBLEM: differents config for each enviroment COPYing at image build
-  - SOLUTION: Single Dockerfile with def ENVs and overwrite per enviroment with ENTRYPOINT script
+- Environment Specific
+  - PROBLEM: different config for each environment COPYing at image build
+  - SOLUTION: Single Dockerfile with def ENVs and overwrite per environment with ENTRYPOINT script
 
 ## Containers-on-VM or Containers-on-Bare-Metal
 
-- Both, evalualo en tu caso -> prubas de perfomance
+- Both, evaluarlo en tu caso -> pruebas de performance
 
 ## Swarm
 
@@ -41,7 +41,7 @@ These will accelerate your project to production
 
 - Image registry
 - Logs
-- Mnitoring and alerting
+- Monitoring and alerting
 
 ## [Tech stacks](https://youtu.be/V4f_sHTzvCI?t=2248)
 
@@ -60,7 +60,7 @@ These will accelerate your project to production
 | Networking         | Docker Swarm                 |
 | Orchestration      | Docker Swarm                 |
 | Storage            | Docker                       |
-| HW / OS            | InfraKit / Terrafom          |
+| HW / OS            | InfraKit / Terraform         |
 
 ### [Docker for X: Cheap and Easy Tech Stack](https://youtu.be/V4f_sHTzvCI?t=2386)
 

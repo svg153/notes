@@ -12,13 +12,13 @@ Listas:
 
 [Video](https://www.youtube.com/watch?v=l9ET1WqRvSQ)
 
-- Reducir el tiempo y el coste utilizando las hipotesis y la experimentación
+- Reducir el tiempo y el coste utilizando las hipótesis y la experimentación
 - La gente no sabe lo que quieren
 - Startup -> aprendizaje
 - Buscar un hueco en el mercado.
-- Crear un producto partiendo de una hipotesis, haces un MVP y pones metricas relevantes.
-  - Hipotesis: La gente quiere algo
-  - MVP: Lo minimo para comprobar la hipótesis
+- Crear un producto partiendo de una hipótesis, haces un MVP y pones métricas relevantes.
+  - Hipótesis: La gente quiere algo
+  - MVP: Lo mínimo para comprobar la hipótesis
   - Los datos para juzgar la hipótesis
 - Es muy importante la retroalimentación y mejora continua en función del feedback de los clientes
   - Pudiendo modificar la hipótesis.
@@ -35,7 +35,7 @@ Listas:
 
 Pasos:
 
-- Ajusta tu termostato a financiero. Segun el patron del dinero que nos hayamos formado (libertad economica vs millones). Al final si no cambiamos la mentalidad volveremos a nuestro termostato.
+- Ajusta tu termostato a financiero. Según el patron del dinero que nos hayamos formado (libertad económica vs millones). Al final si no cambiamos la mentalidad volveremos a nuestro termostato.
 - Deja de quejarte. Buscar solucionarlo vs quejarse (atrae lo malo)
 - Piden que te paguen por tu trabajo y no por tu tiempo (productividad vs tiempo).
 - Véndete a ti mismo. Creer en si mismo.
@@ -45,7 +45,7 @@ Pasos:
 
 [Video](https://www.youtube.com/watch?v=nORCJrKegpo)
 
-Una forma de organizarte sin estres, mas eficiente, mas tareas, sin olvidarte nada.
+Una forma de organizarte sin estrés, mas eficiente, mas tareas, sin olvidarte nada.
 Te enseña a vaciar tu mente y organizarlas.
 
 [Mizu No Kokoro](https://youtu.be/nORCJrKegpo?t=130) - _Be water my friend_
@@ -62,7 +62,7 @@ Todo lo que tienes que haces se puede dividir en:
 
 Las 5 fases del sistema GTD:
 
-1. [Recopila](https://youtu.be/nORCJrKegpo?t=251): Vacia todo desde lo personal a laborar en la "bandeja de entrada". Anótalo todo, sin criterio.
+1. [Recopila](https://youtu.be/nORCJrKegpo?t=251): Vaciá todo desde lo personal a laborar en la "bandeja de entrada". Anótalo todo, sin criterio.
 1. [Procesa](https://youtu.be/nORCJrKegpo?t=269): Organiza todo los elementos:
 
 - Estas no se pueden procesar.
@@ -70,11 +70,11 @@ Las 5 fases del sistema GTD:
   - Otras "Referencias" por si algún día nos sirven.
   - Posponer algunas sin fecha a "Algún día".
 - Si te lleva menos de 2 minutos, hazla y borrar
-- Si es grande o compleja conviertela en un proyecto y dividela.
+- Si es grande o compleja conviértela en un proyecto y divídela.
 - Si no la puedes realizar ty la delegas.
 - Si tiene fecha la anotas en el calendario.
 
-1. [Organiza](https://youtu.be/nORCJrKegpo?t=322): las que si puedes hacer en categorias distintas.
+1. [Organiza](https://youtu.be/nORCJrKegpo?t=322): las que si puedes hacer en categorías distintas.
 
 - Hacer listas que ayuden:
   - No prioritarias en la lista de algún día
@@ -170,15 +170,15 @@ Las 5 fases del sistema GTD:
 - 2º Hazlo atractivo (Deseo):
   - La dopamina es el motor de la motivación.
   - Empareja con algo bueno para generar dopamina.
-  - Rodéate de gente que haga lo mismo.
+  - Rodeate de gente que haga lo mismo.
   - Imitamos a la gente que admiramos.
   - Crea un ritual, haz algo que te guste justo antes de algo duro.
 - 3º Acción:
   - Seguimos la ley del mínimo esfuerzo.
-  - Adapta tu entorno para hacerlo fácil o dificil.
+  - Adapta tu entorno para hacerlo fácil o difícil.
   - Reduce la fricción.
   - Hay actos que tienen impacto en el largo plazo. (Vender el coche)
-  - Los habitos ocurren en momentos decisivos, una vez empezado es más fácil seguir. A tento a ellos.
+  - Los hábitos ocurren en momentos decisivos, una vez empezado es más fácil seguir. Atento a ellos.
   - La regla de los 2 minutos.
   - Invierte en automatizar.
   - Estandariza antes de optimizar. No se puede mejorar un hábito que no existe.
@@ -187,21 +187,21 @@ Las 5 fases del sistema GTD:
   - Lo que se recompensa inmediatamente tiende a ser repetido.
   - Cuando dejes de hacer algo diseña una forma de verlo.
   - Necesitas sensación de logro.
-  - Traquea tus habitos de forma visual
+  - Traquea tus hábitos de forma visual
   - No rompas la cadena.
   - Nunca la rompas dos veces.
 
-### Tacticas avanzadas
+### Tácticas avanzadas
 
 - Como ser experto en algo
   - Escoge algo que se te de bien.
-  - Lageneticainfluyeperosiguehaciendofaltatrabajoduro
+  - La genética influye pero sigue haciendo falta trabajo duro
 - Como seguir motivado
   - Trabaja en tu zona. Que sea un reto, pero no imposible.
   - El mayor riesgo es el aburrimiento.
   - Los profesional es siguen la agenda, los novatos se dejan in fluir por el estado de ánimo.
 - La parte mala de los hábitos
   - Se hacen las cosas sin pensar.
-  - Habitos + Práctica deliberada = Maestría.
+  - Hábitos + Práctica deliberada = Maestría.
   - Necesitas procesos de reflexión (retros, AAR, postmortems).
   - Cuando tienes una identidad, es difícil cambiar.

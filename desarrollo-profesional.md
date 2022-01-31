@@ -23,8 +23,8 @@
     - Notificar de nuevas versiones
 - Comunicación entre equipos
   - Saber como esta el estado de un proyecto
-    - Saber usar herramientas de gestion como Jira, Assana o Trello
-      - Conocer al máximo las herramientas con las que trabajas para sacarlas el maximo partido.
+    - Saber usar herramientas de gestión como Jira, Assana o Trello
+      - Conocer al máximo las herramientas con las que trabajas para sacarlas el máximo partido.
 - Herramientas de control de calidad
   - Enseñar a hacer buen código
   - Ayudan al desarrollador a identificar errores y posible soluciones a su análisis de código

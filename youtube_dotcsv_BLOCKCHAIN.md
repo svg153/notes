@@ -30,7 +30,7 @@ Con lo cual si cambias uno, invalidas la cadena a partir de ese. Para "hackear" 
 
 Blockain se puede aplicar a mas cosas como los Smart Contracts
 
-En vez de guardar transacciones, los smartContracts guardan trozos de codigo para ejecutar cuando algo ocurra si las condiciones se prestan, El contrato esta dentro de la BC
+En vez de guardar transacciones, los smartContracts guardan trozos de código para ejecutar cuando algo ocurra si las condiciones se prestan, El contrato esta dentro de la BC
 
 NFTs certificar la propiedad de una obra digital y certificar su existencia y propiedad dentro de la cadena siendo un activo que puede ser transferido de manera descentralizada pudiendo pujar por ella
 

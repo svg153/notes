@@ -15,11 +15,11 @@ Utilizan paran representar datos que tienen una estructura y relaciones entre da
 
 Datos en tablas cada entidad determinada que tienen clave primaria (primary keys).
 
-Relaciones entre modelos se definen con la clave foranea (foreign key), identificadores qeu existen en otra tabla
+Relaciones entre modelos se definen con la clave foránea (foreign key), identificadores qeu existen en otra tabla
 
-Consistencia de los datos, porque al borrar un intenten que esta referenciado o referencia a otra tabla, el motor se da cuenta.
+Consistencia de los datos, porque al borrar un item que está referenciado o referencia a otra tabla, el motor se da cuenta.
 
-Requiere un schema de definicion de la base de datos.
+Requiere un schema de definición de la base de datos.
 
 ACID: Atomicity, Consistency, Isolation, Durability
 
@@ -27,7 +27,7 @@ Utiliza un lenguaje especial llamado Structured Query Language (SQL) que te perm
 
 Casos de uso:
 
-- Solventa la mayoria de los problemas de la aplicacion
+- Solventa la mayoría de los problemas de la aplicación
 - :warning: No para datos no estructurados
 
 Ejemplos:
@@ -54,11 +54,11 @@ Es mejor no llamarlas no relaciones, es mejor subirlas al mismo nivel que las SQ
 Tablas de hash vitaminadas.
 
 Para acceder a un elemento usamos su clave.
-Son muy rapidas en las lecturas porque están en memoria RAM.
+Son muy rápidas en las lecturas porque están en memoria RAM.
 
-Rapidas pero no puedes hacer consultas complejas y al estar en RAM no puedes tener bases de datos muy grandes.
+Rápidas pero no puedes hacer consultas complejas y al estar en RAM no puedes tener bases de datos muy grandes.
 
-Se pueden guardar tambien en disco no solo en RAM.
+Se pueden guardar también en disco no solo en RAM.
 
 Casos de uso:
 
@@ -96,7 +96,7 @@ Los documentos se agrupan en colecciones que tienen indices y se pueden relacion
 
 Casos de usos:
 
-- Solventa la mayoria de los problemas de la aplicacion
+- Solventa la mayoría de los problemas de la aplicación
 - Juegos
 - IOT
 - :warning: No es ideal para grafos.
@@ -105,7 +105,7 @@ Tradeoff:
 
 - :+1: Schema-Less
 - :+1: Relational-ish queries
-- :-1: withouth joins
+- :-1: withouts joins
 
 Ejemplos:
 
@@ -118,7 +118,7 @@ Las bases de datos funcionan muy similar a las basadas en documentos.
 
 La diferencia es que analiza todo el texto y genera indices para cada elemento "buscable" (similar a como lo hace en un libro en el indice de palabras).
 
-Muy rapidas, y pueden admitir errores de sintaxis, sinónimos, y busqueda en diferentes idiomas.
+Muy rápidas, y pueden admitir errores de sintaxis, sinónimos, y búsqueda en diferentes idiomas.
 
 Casos de uso:
 
@@ -130,6 +130,7 @@ Empresas:
 Ejemplos:
 
 - elastic
+  - [elastic](https://www.youtube.com/watch?v=lYHnv_-H6UY&t=902s)
 - Solr
 - algolia
 - meilisearch
@@ -170,7 +171,7 @@ Ejemplos:
 
 Es como las key-value, pero añadiendo otra dimension
 
-Es mas facil de escalar en multiples nodos
+Es mas fácil de escalar en multiples nodos
 
 Tradeoff
 

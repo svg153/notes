@@ -16,7 +16,7 @@
 - pueda reaccionar rápidamente cuando su supervisión indique un problema.
   - desarrollo y las operaciones, tanto en la solución del problema inmediato como en el análisis de la causa raíz para garantizar que se solucionen los problemas subyacentes.
 
-Mas alla de unos pocos Microservicios:
+Mas allá de unos pocos Microservicios:
 
 - Deberá rastrear las transacciones comerciales a través de múltiples servicios
 - automatizar su aprovisionamiento e implementación mediante la adopción completa de [ContinuousDelivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
@@ -36,7 +36,7 @@ una arquitectura de microservicios:
 
 Roadmap
 
-- Elegir una que esté bastante desacopladas del monolito, no requieran cambios en muchas aplicaciones orientadas al cliente que actualmente usan el monolito y posiblemente no necesitan un almacén de datos. Esten en le borde de la aplicacion.
+- Elegir una que esté bastante desacopladas del monolito, no requieran cambios en muchas aplicaciones orientadas al cliente que actualmente usan el monolito y posiblemente no necesitan un almacén de datos. Estén en le borde de la aplicación.
   - Con el objetivo de practicar
 
 > Como principio fundamental, los equipos de entrega deben minimizar las dependencias de los microservicios recién formados con el monolito.

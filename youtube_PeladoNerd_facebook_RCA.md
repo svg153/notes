@@ -4,7 +4,7 @@ Internet es una red de redes
 
 Para que los proveedores puedan estar conectados a la red, se usa el protocolo BGP
 
-- BGP, border gateway protocol, es un protocolo que sirve para avisar a las demas redes como llegar a tu red
+- BGP, border gateway protocol, es un protocolo que sirve para avisar a las demás redes como llegar a tu red
 
 Tu proveedor de internet y lo hace por ti.
 
@@ -31,21 +31,21 @@ Cada uno tienen una whitelist de rutas que quieres enviar y anunciar unas a uno 
 
 ### [Que pasó en Facebook?](https://youtu.be/FKDr5Mnd6HE?t=543)
 
-Ellos cometieron un error cuando propagaron el """DELETE de las rutas""" que hizo que no pudieran arreglarlo remotamente a su router, y tuvieron que hacerlo de otra manera, como fisicamente a los routers.
+Ellos cometieron un error cuando propagaron el """DELETE de las rutas""" que hizo que no pudieran arreglarlo remotamente a su router, y tuvieron que hacerlo de otra manera, como físicamente a los routers.
 
 Facebook sus propios routers, su propio sistema operativo.
 
 hay sistemas que hace backups de las configuraciones de los routers.
 
-Si tu tienes una sesión BGP, tienen un TTL y despues se empiezan a borrar. El router de tu proveedor al no ver la ruta empieza a borrar las rutas.
+Si tu tienes una sesión BGP, tienen un TTL y después se empiezan a borrar. El router de tu proveedor al no ver la ruta empieza a borrar las rutas.
 
-Asique tambien los proveedores como Cloudflare si no ve la ruta, lo borra solo.
+Asique también los proveedores como Cloudflare si no ve la ruta, lo borra solo.
 
 ### [¿Que se puede hacer para evitarlo?](https://youtu.be/FKDr5Mnd6HE?t=746)
 
 Ellos tenían sistemas para enviar el delete masivo
 
-Tienen un sistema que audita estas tareas de mantenimiento, y los comandos que realizan sobre los routers estaban auditados por humanos y por un sistema automatico, pero algo pasó. Decían que tenian bug.
+Tienen un sistema que audita estas tareas de mantenimiento, y los comandos que realizan sobre los routers estaban auditados por humanos y por un sistema automático, pero algo pasó. Decían que tenían bug.
 
 Que se puede hacer:
 
@@ -61,5 +61,5 @@ Los DNS, iban mas lentos
 
 ## ¿Que hacer si usas esos servicios?
 
-- Tener un sitio web, para actualizarlo facilmente lista de RRHH y diferentes contactos.
+- Tener un sitio web, para actualizarlo fácilmente lista de RRHH y diferentes contactos.
 - Diferentes formas de vender, no solo a traves de WhatsApp.

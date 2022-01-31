@@ -29,15 +29,15 @@
   - Alquiler estable
   - Alquiler vacacional
     - Hay empresa que que se dedican ha hacer toda la gestión de los pisos
-- CrowdLending inmobiliario: estas invirtiendo en proyectos inmobiliarios a lo largo de toda europa. Es totalmente pasiva, puedes condiciones y va automatico y reinvirtiendo los beneficios. Da menos que hacerlo tu pero te quitas de problemas.
+- CrowdLending inmobiliario: estas invirtiendo en proyectos inmobiliarios a lo largo de toda Europa. Es totalmente pasiva, puedes condiciones y va automático y reinvirtiendo los beneficios. Da menos que hacerlo tu pero te quitas de problemas.
   - EstateGuru
     - <https://youtu.be/x6YUdao13ZI?t=395>
-- BlockFI: Cuentas de criptomonedas que te dan interes por tenerlas alli.
+- BlockFI: Cuentas de criptomonedas que te dan interés por tenerlas allí.
   - <https://youtu.be/x6YUdao13ZI?t=481>
-- Crowlending: va destionado a microcéditos, a las personas que los bancos no les dan el dinero. Mas interes mas riesgo.
+- Crowlending: va destinado a microcréditos, a las personas que los bancos no les dan el dinero. Mas interés mas riesgo.
   - Mintos:
     - <https://youtu.be/x6YUdao13ZI?t=538>
-- Mineria de criptomonedas -> generar criptomonedas para trading, compra, conservar.
+- Minería de criptomonedas -> generar criptomonedas para trading, compra, conservar.
   - <https://youtu.be/x6YUdao13ZI?t=151>
 - Trading de criptomonedas para venta a corto plazo
 - Compra de criptomonedas para venta a largo plazo

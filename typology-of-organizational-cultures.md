@@ -8,19 +8,19 @@ Miraron como se comporta el manejo de la información para saber como se comport
 
 Hay 3 patrones:
 
-- Patologico:
+- Patológico:
 - burocrático:
-- generativo: tenga la informacion que necesaria para cumplir la misión
+- generativo: tenga la información que necesaria para cumplir la misión
 
 Leader shape units
 
-Los lideres son lo que mas influyen en la cultura de la organizacion o de un grupo. La importancia de que la gente que lidera sean líderes.
+Los lideres son lo que mas influyen en la cultura de la organización o de un grupo. La importancia de que la gente que lidera sean líderes.
 
 Que el líderes no por las palabras, las recompensas o los castigos... Dime que hace como te comportas a quien asciendes a quien castigas
 
-Y el resto se comporta segun el de arriba se comporta: Consecuencia -> juntos resuelven los problems
+Y el resto se comporta según el de arriba se comporta: Consecuencia -> juntos resuelven los problems
 
-Se pueden encontrar empresas de exito en cualquier caso (aunque en algunos el generativo mas)
+Se pueden encontrar empresas de éxito en cualquier caso (aunque en algunos el generativo mas)
 
 ## Patrones
 
@@ -37,7 +37,7 @@ Se pueden encontrar empresas de exito en cualquier caso (aunque en algunos el ge
 - Fallo: se le echa la culpa al responsable
 - Nuevos retros: Status quo, que no se toque nada
 - Información es personal y no se comparte
-- Alignments: La empresa llega donde llegue el lider fuerte
+- Alignments: La empresa llega donde llegue el líder fuerte
 - Awareness:
 - Empowerment: micromanagement y todo bien atado
 
@@ -60,15 +60,15 @@ Se pueden encontrar empresas de exito en cualquier caso (aunque en algunos el ge
 
 ### Generativo
 
-- Todo se oriente a traves de la mision vision.
-- Se consiga el objetivo con lo minimo necesario
-- Mision antes de las reglas
+- Todo se oriente a traves de la misión vision.
+- Se consiga el objetivo con lo mínimo necesario
+- Misión antes de las reglas
 - Ejemplo: Militares, Emergencias
 - alta cooperación
-- mensajes de malas noticias: se entrana a gente para comunicarlo. Es parte del trabajo y gestionarlo
+- mensajes de malas noticias: se entrena a gente para comunicarlo. Es parte del trabajo y gestionarlo
 - El del problema son compartidos y se solucionan colaborando
 - Construir puentes: recomendables
-- Fallo: ver la causa raiz y mejorar (Agil, Post-Morten sigue esta misma filosofia)
+- Fallo: ver la causa raíz y mejorar (Ágil, Post-Morten sigue esta misma filosofía)
 - Nuevos retros: oportunidades para mejorar y crecer
 - Alignment: mission
 - Awareness: quien tiene el poder quien es el manda y quien es el que se encarga de algo. Temas mas de poder
@@ -77,11 +77,11 @@ Se pueden encontrar empresas de exito en cualquier caso (aunque en algunos el ge
 ## TIPs
 
 - El agilismo intenta ser una cultura generativa.
-- No es recomendable tener un lider muy carismático con mucha influencia que lleve ciertos proyectos porque al final si se va, se pierde el proyecto o hace bastante daño a la organización porque puede que se vaya la gente que le sigue.
-- Los lideres van formando la cultura de la organizacion o compañía.
+- No es recomendable tener un líder muy carismático con mucha influencia que lleve ciertos proyectos porque al final si se va, se pierde el proyecto o hace bastante daño a la organización porque puede que se vaya la gente que le sigue.
+- Los lideres van formando la cultura de la organización o compañía.
 - La cultura se puede cambiar. Si lo consigues. Va a cambiar todo muchísimo.
 - En que momento estás y que modo de gestión es el mas adecuado. Cuando hay una incidencia crítica, el ordeno y mando es mas eficiente.
-- Es muy dificil cambiar la cultura de una organizacion desde abajo a arriba. Lo lo que tienen poder se tienen que implicar directamente en la organizacion.
+- Es muy difícil cambiar la cultura de una organización desde abajo a arriba. Lo lo que tienen poder se tienen que implicar directamente en la organización.
 
 ## QAs and reviews
 

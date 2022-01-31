@@ -4,7 +4,7 @@
 
 una plataforma que ayuda a los desarrolladores o al equipo de operaciones a reducir el time to prod y mejorar el ciclo de vida de los aplicaciones
 
-## [¿Deberian los desarrolladores saber de Docker y Kubernetes?](https://youtu.be/e1bavPwQmVc?t=393)
+## [¿Deberían los desarrolladores saber de Docker y Kubernetes?](https://youtu.be/e1bavPwQmVc?t=393)
 
 Es importante tener un equipo dedicado a mantener la infraestructura y que se focalice en tenerla un plataforma evolutiva en el tiempo por lo que hemos aprendido del pasado desde Windows Server a Kubernetes. Y así los desarrolladores se pueden centrar en el desarrollo. Al final ellos han hecho la aplicaciones y saben como quiere que funcione, por lo tanto, tienen que haber una colaboración entre ambos equipos. Por tanto si ambos equipo entienden algo del lenguaje del otro la colaboración será mucho mas fluida.
 
@@ -20,13 +20,13 @@ Mejore dividir en cluster, para actualizaciones.
 
 ## [¿Multicluster en Kubernetes?](https://youtu.be/e1bavPwQmVc?t=744)
 
-Como crear archivos de configuracion y como distribuirlos, eso es para todo, no solo para Kubernetes
+Como crear archivos de configuración y como distribuirlos, eso es para todo, no solo para Kubernetes
 En el caso de Kubernetes hay una API.
 
 - cuando empiezas, con un pull de un repo.
 
 <https://youtu.be/e1bavPwQmVc?t=968>
-GitOps no funciona en todos los casos, una funcion que necesita implementarse progresivamente y distribuirlo progresivamente en uno o mas clusters. Para eso, no se puede definir un fichero estático y Kubernetes no ayuda. Hay otras herramientas que ayudan como Flagger, Argo CD & Rollouts, pero no hay nada definitivo,
+GitOps no funciona en todos los casos, una función que necesita implementarse progresivamente y distribuirlo progresivamente en uno o mas clusters. Para eso, no se puede definir un fichero estático y Kubernetes no ayuda. Hay otras herramientas que ayudan como Flagger, Argo CD & Rollouts, pero no hay nada definitivo,
 
 ## [Multi Ingress / Istio](https://youtu.be/e1bavPwQmVc?t=1040)
 
@@ -46,7 +46,7 @@ Cuando tienes varias regiones pones un balanceador global de carga encima de esa
 
 ## [Infraestructura como datos](https://youtu.be/e1bavPwQmVc?t=1361)
 
-¿Cuando deberias empezar ha hacer la infraestructura con Kubernetes en vez de con Terraform? ¿Terraform, Ansible, deberíamos seguir usándolas ahora?
+¿Cuando deberías empezar ha hacer la infraestructura con Kubernetes en vez de con Terraform? ¿Terraform, Ansible, deberíamos seguir usándolas ahora?
 
 - Primero hay que preguntarse ...
   - ¿Que resolvían en el momento que se crearon?
@@ -60,7 +60,7 @@ Cuando tienes varias regiones pones un balanceador global de carga encima de esa
   - Lo bueno que tiene que vale para muchos sistemas y conectarlos.
   - 3 niveles (decide ownership and behavior): cloud providers control plane, terraform module, HCL files.
 
-> _When you say infrastructure is code and you own the resource, then you code is nothing more a mere sugestion and you are going to lose the synchrony between your logic and the actual logic of your provider_
+> _When you say infrastructure is code and you own the resource, then you code is nothing more a mere suggestion and you are going to lose the synchrony between your logic and the actual logic of your provider_
 
 Kubernetes se basa en la **Promised Theory**, _Tell me what you want and I will do whatever it takes to get you there_
 
@@ -72,13 +72,13 @@ Al tener **infraestructura como dato**, te puedes beneficiar de que los datos so
 
 Con los datos puede tenerlo en git, diff, backup, restaurarlo y volver al estado anterior sin perder el contrato original. El software no funciona así lo que ves no refleja la realidad.
 
-Al final, va a seguir terraform y demas, para crear el cluster pero no para administrar los recursos.
+Al final, va a seguir terraform y demás, para crear el cluster pero no para administrar los recursos.
 
 ## [La polémica de Docker Desktop](https://youtu.be/e1bavPwQmVc?t=)
 
 El negocio del software se basa en tener clientes que paguen por un software, para poder pagar a los desarrolladores para que puedan seguir mejorándolo para tener mas cliente y obtener beneficios.
 
-El software libre, puedes cambiarlo y no pagar por el. Así que, las unicas maneras de que esos productos libres, sigan siendo sostenibles (añadiendo nuevas funcionalidades, arreglando errores, seguridad) es que algo o alguien subvencione o haya un modelo de negocio sostenible para seguir pagando a los desarrolladores a largo plazo.
+El software libre, puedes cambiarlo y no pagar por el. Así que, las únicas maneras de que esos productos libres, sigan siendo sostenibles (añadiendo nuevas funcionalidades, arreglando errores, seguridad) es que algo o alguien subvencione o haya un modelo de negocio sostenible para seguir pagando a los desarrolladores a largo plazo.
 
 Lo que hay que poner el foco es en el roadmap de los productos para seguir pagando la suscripción o no
 
