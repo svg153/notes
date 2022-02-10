@@ -24,7 +24,7 @@ Se pueden encontrar empresas de éxito en cualquier caso (aunque en algunos el g
 
 ## Patrones
 
-### Patologico
+### Patológico
 
 - El que tiene la info tiene el poder.
 - No la comparte porque tiene el poder y se vuelve imprescindible.
