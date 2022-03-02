@@ -20,3 +20,22 @@
   - [![roles](https://www.smartsheet.com/sites/default/files/styles/1300px/public/IC-Belbins-roles-Game-of-Thrones.jpg?itok=MmJUaG1Y)](https://www.smartsheet.com/sites/default/files/styles/1300px/public/IC-Belbins-roles-Game-of-Thrones.jpg?itok=MmJUaG1Y)
 - Myers-Briggs o MBTI
 - DISC
+
+## GitHub
+
+### Get all labels in GitHub organization
+
+Github CLI alias [`repos-name-all` in `gh/config.yml`](https://github.com/svg153/configLinux/blob/2272f292cc8c49ddf484d8955a8bbc7ae7a08d7c/.config/gh/config.yml#L22)
+
+Generate a github token
+
+Go to [label-exporter clone](https://github.com/svg153/label-exporter/)
+
+Change: "UUUUU", "XXXXX"
+
+```bash
+GITHUB_TOKEN="XXXXX"
+USER="UUUUU"
+for r in $(gh repos-name-all "${USER}"); do make docker-repo token="${GITHUB_TOKEN}" org_label="${USER}" repo_label="${r}" >> labels.yaml; done
+yq 'unique_by(.name) | sort_by(.name)' labels.yaml > labels_uniqs.yaml
+```
