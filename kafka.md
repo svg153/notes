@@ -3,8 +3,7 @@
 Replication factor de 3 -> 300gb -> 100gb
 El minimo replicas: 2
 
-
-cuanto tiempo queramos darnos para reprocesar en funcionar 
+cuanto tiempo queramos darnos para reprocesar en funcionar
 
 en cloud mucho mas estable
 
