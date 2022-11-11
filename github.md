@@ -8,6 +8,7 @@
   - [.github](https://github.com/cucumber/.github), use [probot/settings].
   - [github-settings](https://github.com/cucumber/github-settings), with Pulumi code
 - [govuk org configuration](https://github.com/alphagov/govuk-saas-config)
+- [sigstore/community](https://github.com/sigstore/community)
 
 #### Tool and documentation
 
@@ -17,11 +18,18 @@ All use the [GitHub API](https://docs.github.com/en/rest):
 - [go-github](https://github.com/google/go-github)
   - [Terraform GitHub provider](https://registry.terraform.io/providers/integrations/github/latest/docs)
     - [GitHub organization with terraform](https://www.mineiros.io/blog/how-to-manage-your-github-organization-with-terraform)
-  - [Crossplane GitHub provider](https://github.com/crossplane-contrib/provider-github)
-    - [crossplane/org](https://github.com/crossplane/org/), using crossplane to manage [organization members](https://github.com/crossplane/org/blob/main/config/members-crossplane.yaml)
-    - [PoC of vshn organization](https://github.com/vshn/crossplane-git-poc) to use crossplane for member management in github and gitlab
+  - [Crossplane GitHub provider][crossplane-contrib/provider-github]
+    - [crossplane/org](https://github.com/crossplane/org/), using Crossplane to manage [organization members](https://github.com/crossplane/org/blob/main/config/members-crossplane.yaml)
+      - [stone-payments/crossplane-provider-github](https://github.com/stone-payments/crossplane-provider-github/) Crossplane provider to manage GitHub repositories.
+    - [PoC of vshn organization](https://github.com/vshn/crossplane-git-poc) to use Crossplane for member management in GitHub and GitLab
+    - Using jet:
+      - [HotThoughts/provider-jet-github](https://github.com/HotThoughts/provider-jet-github)
+      - [PoC of LucaLanziani](https://github.com/LucaLanziani/crossplane-jet-github) a fork of [crossplane-contrib/provider-github]
 - [kubernetes](https://github.com/kubernetes/test-infra)
   - [peribolos](https://github.com/kubernetes/test-infra/tree/master/prow/cmd/peribolos): allows the org settings, teams and memberships to be declared in a yaml file. GitHub is then updated to match the declared configuration.
+- Commercial tools:
+  - <https://mineiros.io/github-as-code>
 
 [github/safe-settings]: https://github.com/github/safe-settings
 [probot/settings]: https://github.com/probot/settings
+[crossplane-contrib/provider-github]: https://github.com/crossplane-contrib/provider-github
