@@ -25,10 +25,16 @@ All use the [GitHub API](https://docs.github.com/en/rest):
     - Using jet:
       - [HotThoughts/provider-jet-github](https://github.com/HotThoughts/provider-jet-github)
       - [PoC of LucaLanziani](https://github.com/LucaLanziani/crossplane-jet-github) a fork of [crossplane-contrib/provider-github]
-- [kubernetes](https://github.com/kubernetes/test-infra)
-  - [peribolos](https://github.com/kubernetes/test-infra/tree/master/prow/cmd/peribolos): allows the org settings, teams and memberships to be declared in a yaml file. GitHub is then updated to match the declared configuration.
+    - Using upjet (new):
+      - [coopnorge/provider-github](https://github.com/coopnorge/provider-github)
+  - [kubernetes](https://github.com/kubernetes/test-infra)
+    - [peribolos](https://github.com/kubernetes/test-infra/tree/master/prow/cmd/peribolos): allows the org settings, teams and memberships to be declared in a yaml file. GitHub is then updated to match the declared configuration.
 - Commercial tools:
-  - <https://mineiros.io/github-as-code>
+  - [mineiros-io/github-as-code-example](https://github.com/mineiros-io/github-as-code-example)
+    - <https://mineiros.io/github-as-code>
+
+- GitHub workflow to apply the github config terraform code
+  - <https://github.com/concourse/governance/blob/master/.github/workflows/terraform.yml>
 
 [github/safe-settings]: https://github.com/github/safe-settings
 [probot/settings]: https://github.com/probot/settings

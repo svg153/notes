@@ -39,3 +39,10 @@ USER="UUUUU"
 for r in $(gh repos-name-all "${USER}"); do make docker-repo token="${GITHUB_TOKEN}" org_label="${USER}" repo_label="${r}" >> labels.yaml; done
 yq 'unique_by(.name) | sort_by(.name)' labels.yaml > labels_uniqs.yaml
 ```
+
+### Run and watch workflow
+
+```bash
+WF="build.yml"
+gh workflow run ${WF} --ref $(git branch-name); sleep 10s; gh run watch $(gh run list --branch=$(git branch --show) --workflow ${WF} --limit 1 --json="conclusion,createdAt,databaseId,event,headBranch,headSha,name,status,updatedAt,url,workflowDatabaseId" --jq='.[].databaseId')
+```
