@@ -21,28 +21,12 @@
 - Myers-Briggs o MBTI
 - DISC
 
-## GitHub
+## The Joel Test
 
-### Get all labels in GitHub organization
+Es un test redactado por [Joel Spolsky](https://es.wikipedia.org/wiki/Joel_Spolsky) que se volvió viral en los 2000. Con él se puede medir la calidad de la creación del software en 12 pasos. Doce preguntas sencillas que determinan la calidad de tu software.
 
-Github CLI alias [`repos-name-all` in `gh/config.yml`](https://github.com/svg153/configLinux/blob/2272f292cc8c49ddf484d8955a8bbc7ae7a08d7c/.config/gh/config.yml#L22)
+- <https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/>
 
-Generate a github token
+## The David Test
 
-Go to [label-exporter clone](https://github.com/svg153/label-exporter/)
-
-Change: "UUUUU", "XXXXX"
-
-```bash
-GITHUB_TOKEN="XXXXX"
-USER="UUUUU"
-for r in $(gh repos-name-all "${USER}"); do make docker-repo token="${GITHUB_TOKEN}" org_label="${USER}" repo_label="${r}" >> labels.yaml; done
-yq 'unique_by(.name) | sort_by(.name)' labels.yaml > labels_uniqs.yaml
-```
-
-### Run and watch workflow
-
-```bash
-WF="build.yml"
-gh workflow run ${WF} --ref $(git branch-name); sleep 10s; gh run watch $(gh run list --branch=$(git branch --show) --workflow ${WF} --limit 1 --json="conclusion,createdAt,databaseId,event,headBranch,headSha,name,status,updatedAt,url,workflowDatabaseId" --jq='.[].databaseId')
-```
+<https://www.getmanfred.com/the-david-test>
