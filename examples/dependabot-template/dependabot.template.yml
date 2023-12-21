@@ -1,0 +1,23 @@
+# This is the default template to create a dependabot.yml file for this repo
+# This file is based on the following documentation:
+# https://github.com/Makeshift/generate-dependabot-glob-action?tab=readme-ov-file#create-a-githubdependabottemplateyml-file
+# This file will be use by the following GitHub Workflow: .github/workflows/dependabot.yml
+
+version: 2
+updates:
+  # src docker projects
+  - package-ecosystem: 'docker'
+    directory: '/src/**/Dockerfile*'
+    schedule:
+      interval: 'weekly'
+      day: 'wednesday'
+    labels:
+      - 'dependencies'
+  # tests
+  - package-ecosystem: 'docker'
+    directory: '/tests/**/Dockerfile*'
+    schedule:
+      interval: 'weekly'
+      day: 'wednesday'
+    labels:
+      - 'dependencies'

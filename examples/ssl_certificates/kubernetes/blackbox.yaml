@@ -1,0 +1,19 @@
+config:
+  modules:
+    http:
+      prober: "http"
+      timeout: "5s"
+      http:
+        tls_config:
+          insecure_skip_verify: true
+        preferred_ip_protocol: "ip4"
+        ip_protocol_fallback: true
+    tcp_tls:
+      prober: "tcp"
+      timeout: "5s"
+      tcp:
+        tls: true
+        tls_config:
+          insecure_skip_verify: true
+        preferred_ip_protocol: "ip4"
+        ip_protocol_fallback: true
