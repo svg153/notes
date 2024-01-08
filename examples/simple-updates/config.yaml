@@ -1,0 +1,25 @@
+config:
+  labels:
+    - dependencies
+  schedule:
+    interval: "weekly"
+    day: "wednesday"
+groups:
+  - package-ecosystem: npm
+    repos:
+      repo1:
+      repo2:
+
+  - package-ecosystem: github-actions
+    repos:
+      repo1:
+      repo2:
+      repo3:
+        - a/b
+        - c/d
+
+  - package-ecosystem: nuget
+    repos:
+      repo3:
+        - e/f
+        - g

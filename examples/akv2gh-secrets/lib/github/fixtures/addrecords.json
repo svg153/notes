@@ -1,0 +1,19 @@
+[
+  {
+    "name": "patata",
+    "ttl": 600,
+    "type": "A",
+    "data": "1.3.3.7"
+  },
+  {
+    "service": "_freidora",
+    "protocol": "_tcp",
+    "name": "@",
+    "ttl": 600,
+    "type": "SRV",
+    "priority": 1,
+    "weight": 0,
+    "port": 1337,
+    "data": "freidora.example.com"
+  }
+]

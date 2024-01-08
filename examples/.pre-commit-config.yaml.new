@@ -1,0 +1,7 @@
+- repo: https://github.com/avilaton/add-msg-issue-prefix-hook
+    # Needs to install '--hook-type prepare-commit-msg'
+    rev: v0.0.5
+    hooks:
+      - id: add-msg-issue-prefix
+        args:
+          - '--template={}'

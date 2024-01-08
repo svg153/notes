@@ -1,0 +1,16 @@
+config:
+  labels:
+    - dependencies
+  schedule:
+    interval: "weekly"
+    day: "wednesday"
+groups:
+  - package-ecosystem: github-actions
+    repos:
+      admin:
+        - "/"
+        - "/.github/repos/infrastructure/.github/workflows/"
+        - "/.github/actions/build-container/"
+        - "/.github/actions/deploy-aks-kustomize/"
+        - "/.github/actions/e2e-run/"
+        - "/.github/actions/performance-run/"

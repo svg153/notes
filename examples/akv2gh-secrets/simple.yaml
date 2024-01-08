@@ -1,0 +1,37 @@
+organization:
+  - akv_secret_name: azurecr-username
+    gh_secret_name: AZURECR_USERNAME
+  - akv_secret_name: azurecr-password
+    gh_secret_name: AZURECR_PASSWORD
+  - akv_secret_name: preproduction-azure-credentials
+    gh_secret_name: PREPRODUCTION_AZURE_CREDENTIALS
+  - akv_secret_name: production-azure-credentials
+    gh_secret_name: PRODUCTION_AZURE_CREDENTIALS
+
+repositories:
+  - test1:
+    - akv_secret_name: azurecr-tenable-username
+      gh_secret_name: AZURE_REGISTRY_PASSWORD
+    - akv_secret_name: azurecr-tenable-password
+      gh_secret_name: AZURE_REGISTRY_USERNAME
+  - test2:
+    - akv_secret_name: environment-values-staging-dashboard
+      gh_secret_name: STAGING_ENVIRONMENT_VALUES
+    - akv_secret_name: environment-values-sandbox-dashboard
+      gh_secret_name: SANDBOX_ENVIRONMENT_VALUES
+  - test3:
+    - akv_secret_name: environment-values-staging-front-office-config
+      gh_secret_name: STAGING_ENVIRONMENT_VALUES
+    - akv_secret_name: environment-values-sandbox-front-office-config
+      gh_secret_name: SANDBOX_ENVIRONMENT_VALUES
+
+common:
+  - secrets:
+      - akv_secret_name: environment-values-staging
+        gh_secret_name: STAGING_ENVIRONMENT_VALUES
+      - akv_secret_name: environment-values-sandbox
+        gh_secret_name: SANDBOX_ENVIRONMENT_VALUES
+    repositories:
+      - test4
+      - test5
+      - test6

@@ -1,0 +1,51 @@
+[
+  {
+    "name": "@",
+    "ttl": 3600,
+    "type": "A",
+    "data": "10.0.0.1"
+  },
+  {
+    "name": "www",
+    "ttl": 3600,
+    "type": "CNAME",
+    "data": "@"
+  },
+  {
+    "name": "test",
+    "ttl": 600,
+    "type": "A",
+    "data": "10.0.0.2"
+  },
+  {
+    "name": "test",
+    "ttl": 600,
+    "type": "A",
+    "data": "10.0.0.3"
+  },
+  {
+    "name": "@",
+    "ttl": 3600,
+    "type": "MX",
+    "priority": 0,
+    "data": "smtp.mailserver.com"
+  },
+  {
+    "name": "@",
+    "ttl": 3600,
+    "type": "MX",
+    "priority": 5,
+    "data": "smtp2.mailserver.com"
+  },
+  {
+    "service": "_sipfederationtls",
+    "protocol": "_tcp",
+    "name": "@",
+    "ttl": 3600,
+    "type": "SRV",
+    "priority": 100,
+    "weight": 1,
+    "port": 5061,
+    "data": "sipserver.example.com"
+  }
+]

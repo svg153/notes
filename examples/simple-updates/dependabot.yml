@@ -1,0 +1,29 @@
+updates:
+- directory: /
+  labels: &id001
+  - dependencies
+  package-ecosystem: github-actions
+  schedule: &id002
+    day: wednesday
+    interval: weekly
+- directory: /.github/repos/infrastructure/.github/workflows/
+  labels: *id001
+  package-ecosystem: github-actions
+  schedule: *id002
+- directory: /.github/actions/build-container/
+  labels: *id001
+  package-ecosystem: github-actions
+  schedule: *id002
+- directory: /.github/actions/deploy-aks-kustomize/
+  labels: *id001
+  package-ecosystem: github-actions
+  schedule: *id002
+- directory: /.github/actions/e2e-run/
+  labels: *id001
+  package-ecosystem: github-actions
+  schedule: *id002
+- directory: /.github/actions/performance-run/
+  labels: *id001
+  package-ecosystem: github-actions
+  schedule: *id002
+version: 2

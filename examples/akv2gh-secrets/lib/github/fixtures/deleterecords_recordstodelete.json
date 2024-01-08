@@ -1,0 +1,21 @@
+[
+  {
+    "name": "test",
+    "ttl": 600,
+    "type": "A",
+    "data": "10.0.0.2"
+  },
+  {
+    "name": "@",
+    "ttl": 3600,
+    "type": "MX",
+    "priority": 5,
+    "data": "smtp2.mailserver.com"
+  },
+  {
+    "name": "test",
+    "ttl": 600,
+    "type": "A",
+    "data": "10.1.1.1"
+  }
+]
