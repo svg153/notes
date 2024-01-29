@@ -6,7 +6,7 @@ b build:
 		-t terraformer-azure \
 		.
 
-r run: 
+r run:
 	docker run -it \
 		-e ARM_SUBSCRIPTION_ID=${ARM_SUBSCRIPTION_ID} \
 		-v $${HOME}/.azure:/root/.azure \

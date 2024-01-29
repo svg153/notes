@@ -7,21 +7,21 @@
 
 ## Projects beta
 
-- Github Action to autoamte: https://github.com/leonsteinhaeuser/project-beta-automations (from https://github.com/alex-page/github-project-automation-plus/issues/76)
-- 
+- Github Action to autoamte: <https://github.com/leonsteinhaeuser/project-beta-automations> (from <https://github.com/alex-page/github-project-automation-plus/issues/76>)
+-
 
 ## github as code
 
-- https://github.com/github/safe-settings
-- https://github.com/cloudalchemy/auto-maintenance/tree/master
-- 
+- <https://github.com/github/safe-settings>
+- <https://github.com/cloudalchemy/auto-maintenance/tree/master>
+-
 
 ## ISSUE_TEMPLATE and PR_TEMPLATE
 
 Add template to all repos: ## .github/ISSUE_TEMPLATE/user-story.md
 
 - Validate pull request title
-  - https://sourcegraph.com/github.com/terraform-aws-modules/terraform-aws-eks/-/blob/.github/workflows/pr-title.yml
+  - <https://sourcegraph.com/github.com/terraform-aws-modules/terraform-aws-eks/-/blob/.github/workflows/pr-title.yml>
 
 ### Info
 
@@ -99,68 +99,61 @@ ADD: committed,blocked
 
 ### Info
 
-https://sourcegraph.com/search?q=context:global+%22github-issues%22+file:.github-issues&patternType=literal
-https://sourcegraph.com/github.com/microsoft/vscode-npm-scripts/-/blob/issues.github-issues
-https://github.com/microsoft/azuredatastudio/blob/main/.vscode/notebooks/grooming.github-issues
+<https://sourcegraph.com/search?q=context:global+%22github-issues%22+file:.github-issues&patternType=literal>
+<https://sourcegraph.com/github.com/microsoft/vscode-npm-scripts/-/blob/issues.github-issues>
+<https://github.com/microsoft/azuredatastudio/blob/main/.vscode/notebooks/grooming.github-issues>
 
 ### Questions
 
 ### Proposal
 
 ## Workflow
-- update-changelog
-  - https://sourcegraph.com/github.com/laravel/.github/-/blob/.github/workflows/update-changelog.yml
 
+- update-changelog
+  - <https://sourcegraph.com/github.com/laravel/.github/-/blob/.github/workflows/update-changelog.yml>
 
 ## Other
+
 - profile.yml
   - [Color](https://sourcegraph.com/github.com/vimal-verma/.github/-/blob/profile.yml) ??
 - [prevent-public-repos](https://github.com/apps/prevent-public-repos)
-- https://github.com/git-chglog/git-chglog
-
-
+- <https://github.com/git-chglog/git-chglog>
 
 ## Check runs
 
-- https://sourcegraph.com/search?q=context:global+and+check_runs+and+in_progress+file:%5C.github/workflows&patternType=literal
-  - https://github.com/external-secrets/external-secrets/blob/main/.github/workflows/e2e-managed.yml
+- <https://sourcegraph.com/search?q=context:global+and+check_runs+and+in_progress+file:%5C.github/workflows&patternType=literal>
+  - <https://github.com/external-secrets/external-secrets/blob/main/.github/workflows/e2e-managed.yml>
 
+<https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels>
+<https://opensource.guide/building-community/>
+<https://opensource.guide/leadership-and-governance/>
 
+<https://sourcegraph.com/github.com/angular/.github/-/blob/.github/in-solidarity.yml>
+<https://sourcegraph.com/github.com/doctrine/.github/-/tree/workflow-templates>
+<https://sourcegraph.com/github.com/googleapis/.github/-/tree/allstar>
+<https://sourcegraph.com/github.com/obsproject/.github/-/blob/.github/ISSUE_TEMPLATE/config.yml>
+<https://sourcegraph.com/github.com/flutter/.github/-/tree/profile>
+<https://sourcegraph.com/github.com/doomemacs/.github>
+<https://sourcegraph.com/github.com/MacrowebCloud/.github/-/tree/assets>
+<https://sourcegraph.com/github.com/elementary/.github/-/tree/.github/ISSUE_TEMPLATE>
+<https://sourcegraph.com/github.com/aosp-mirror/.github/-/blob/mistaken-pull-closer.yml>
+<https://sourcegraph.com/github.com/OpenMined/.github/-/blob/language_standards/c++/.clang-format?L31>
+<https://sourcegraph.com/github.com/jessesquires/.github/-/tree/.github/ISSUE_TEMPLATE>
+<https://sourcegraph.com/github.com/spring-projects/.github>
+<https://sourcegraph.com/github.com/hashicorp/.github>
+<https://sourcegraph.com/github.com/pallets/.github/-/tree/workflow-templates>
+<https://sourcegraph.com/github.com/stellar/.github/-/tree/profile>
+<https://sourcegraph.com/github.com/benbalter/.github/-/blob/README.md>
+<https://sourcegraph.com/github.com/cloudflare/.github>
+<https://sourcegraph.com/github.com/kowainik/.github/-/blob/workflow-templates/ci.yml>
+<https://sourcegraph.com/github.com/github/.github/-/blob/profile/README.md>
+<https://sourcegraph.com/github.com/vanillawc/.github/-/tree/assets>
+<https://sourcegraph.com/github.com/rnc-archive/.github/-/blob/.github/PULL_REQUEST_TEMPLATE.md>
+<https://sourcegraph.com/github.com/Debian/.github/-/blob/.github/ISSUE_TEMPLATE/join.yml>
+<https://sourcegraph.com/github.com/MicrosoftDocs/.github/-/blob/SECURITY.MD>
+<https://sourcegraph.com/github.com/microsoft/.github/-/blob/SECURITY.md>
+<https://sourcegraph.com/github.com/atom/.github/-/blob/CODE_OF_CONDUCT.md>
+<https://sourcegraph.com/github.com/coopTilleuls/.github/-/blob/profile/README.md>
 
-
-https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels
-https://opensource.guide/building-community/
-https://opensource.guide/leadership-and-governance/
-
-
-
-https://sourcegraph.com/github.com/angular/.github/-/blob/.github/in-solidarity.yml
-https://sourcegraph.com/github.com/doctrine/.github/-/tree/workflow-templates
-https://sourcegraph.com/github.com/googleapis/.github/-/tree/allstar
-https://sourcegraph.com/github.com/obsproject/.github/-/blob/.github/ISSUE_TEMPLATE/config.yml
-https://sourcegraph.com/github.com/flutter/.github/-/tree/profile
-https://sourcegraph.com/github.com/doomemacs/.github
-https://sourcegraph.com/github.com/MacrowebCloud/.github/-/tree/assets
-https://sourcegraph.com/github.com/elementary/.github/-/tree/.github/ISSUE_TEMPLATE
-https://sourcegraph.com/github.com/aosp-mirror/.github/-/blob/mistaken-pull-closer.yml
-https://sourcegraph.com/github.com/OpenMined/.github/-/blob/language_standards/c++/.clang-format?L31
-https://sourcegraph.com/github.com/jessesquires/.github/-/tree/.github/ISSUE_TEMPLATE
-https://sourcegraph.com/github.com/spring-projects/.github
-https://sourcegraph.com/github.com/hashicorp/.github
-https://sourcegraph.com/github.com/pallets/.github/-/tree/workflow-templates
-https://sourcegraph.com/github.com/stellar/.github/-/tree/profile
-https://sourcegraph.com/github.com/benbalter/.github/-/blob/README.md
-https://sourcegraph.com/github.com/cloudflare/.github
-https://sourcegraph.com/github.com/kowainik/.github/-/blob/workflow-templates/ci.yml
-https://sourcegraph.com/github.com/github/.github/-/blob/profile/README.md
-https://sourcegraph.com/github.com/vanillawc/.github/-/tree/assets
-https://sourcegraph.com/github.com/rnc-archive/.github/-/blob/.github/PULL_REQUEST_TEMPLATE.md
-https://sourcegraph.com/github.com/Debian/.github/-/blob/.github/ISSUE_TEMPLATE/join.yml
-https://sourcegraph.com/github.com/MicrosoftDocs/.github/-/blob/SECURITY.MD
-https://sourcegraph.com/github.com/microsoft/.github/-/blob/SECURITY.md
-https://sourcegraph.com/github.com/atom/.github/-/blob/CODE_OF_CONDUCT.md
-https://sourcegraph.com/github.com/coopTilleuls/.github/-/blob/profile/README.md
-
-
-https://sourcegraph.com/search?q=context:global+repo:.*/.github&patternType=literal&case=yes
-https://sourcegraph.com/search?q=context:global+repo:.*/.github+file:%5E%5C.github&patternType=literal&case=yes
+<https://sourcegraph.com/search?q=context:global+repo:.*/.github&patternType=literal&case=yes>
+<https://sourcegraph.com/search?q=context:global+repo:.*/.github+file:%5E%5C.github&patternType=literal&case=yes>

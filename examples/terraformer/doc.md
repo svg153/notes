@@ -26,7 +26,6 @@ export ARM_TENANT_ID=[TENANT_ID]
 ./terraformer import azure -r resource_group --filter=resource_group=/subscriptions/<Subscription id>/resourceGroups/<RGNAME>
 ```
 
-
 Donwload terraformer provider
 
 ```bash
