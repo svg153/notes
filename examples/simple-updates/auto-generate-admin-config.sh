@@ -32,4 +32,3 @@ groups:
     repos:
       admin: ${list_of_folders_in_actions[@]}
 EOF
-
