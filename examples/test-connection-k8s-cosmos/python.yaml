@@ -1,0 +1,114 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-infra
+  labels:
+    app: python-infra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-infra
+  template:
+    metadata:
+      labels:
+        app: python-infra
+    spec:
+      volumes:
+        - name: python-infra-script
+          configMap:
+            name: python-infra-script
+      containers:
+        - name: python-infra
+          image: python:3.10
+          command:
+            - /bin/bash
+          args:
+            - -c
+            - pip install azure-storage-blob; sleep infinity
+          volumeMounts:
+            - name: python-infra-script
+              mountPath: /src/
+          env:
+            - name: CONNECTION_STRING
+              valueFrom:
+                secretKeyRef:
+                  name: pezalablock
+                  key: connection_string
+            - name: COSMOS_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: cosmosgateway
+                  key: endpoint
+            - name: COSMOS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cosmosgateway
+                  key: key
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "10m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: python-infra-script
+data:
+  infra.py: |
+    import os, uuid
+    from azure.storage.blob import BlobServiceClient
+    
+    blob_service_client = BlobServiceClient.from_connection_string(os.getenv('CONNECTION_STRING'))
+    containers = blob_service_client.list_containers()
+    for c in containers: 
+        container_name=c.name
+        print("Container name: {}".format(container_name))
+        
+        container_client = blob_service_client.get_container_client(container_name)
+        blobs = container_client.list_blobs()
+        for b in blobs:
+            print("\t" + b.name)
+  cosmosexample.py: |
+    import os
+    import pprint
+    import azure.cosmos.cosmos_client as cosmos_client
+
+    client = cosmos_client.CosmosClient(os.environ['COSMOS_HOST'], {'masterKey': os.environ['COSMOS_KEY']})
+
+    print("Databases:")
+    for d in client.list_databases():
+        pprint.pprint(d)
+
+    database_name = 'testDatabase'
+    try:
+        database = client.CreateDatabase({'id': database_name})
+    except errors.HTTPFailure:
+        database = client.ReadDatabase("dbs/" + database_name)  
+
+    import azure.cosmos.documents as documents
+    container_definition = {
+        'id': 'products',
+        'partitionKey': {
+            'paths': ['/productName'],
+            'kind': documents.PartitionKind.Hash
+        }
+    }
+    try:
+        container = client.CreateContainer(
+            "dbs/" + database['id'], container_definition, {'offerThroughput': 400})
+    except errors.HTTPFailure as e:
+        if e.status_code == http_constants.StatusCodes.CONFLICT:
+            container = client.ReadContainer(
+                "dbs/" + database['id'] + "/colls/" + container_definition['id'])
+        else:
+            raise e
+    
+    print("Databases:")
+    for d in client.list_databases():
+        pprint.pprint(d)
