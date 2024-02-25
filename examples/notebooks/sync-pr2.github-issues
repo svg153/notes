@@ -1,0 +1,52 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Files sync PRs\n\nall PRs open by `sync-*` workflows"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Query parameters"
+  },
+  {
+    "kind": 2,
+    "language": "github-issues",
+    "value": "// Peza repos\n$repos=org:pezaio\n// Configuration\n$openPRs=is:pr is:open"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Open PRs"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### sync"
+  },
+  {
+    "kind": 2,
+    "language": "github-issues",
+    "value": "$repos $openPRs label:sync"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### dependencies"
+  },
+  {
+    "kind": 2,
+    "language": "github-issues",
+    "value": "$repos $openPRs label:dependencies"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Rest"
+  },
+  {
+    "kind": 2,
+    "language": "github-issues",
+    "value": "$repos $openPRs -label:sync -label:dependencies"
+  }
+]
