@@ -22,7 +22,7 @@ tener carpetas de proectos
 
 arbol, organizacion, carpetas, proyectos, recuros
 
-IAM, politica de iam, documento quien puede hacer que sobre qeu recuros y de manera opcional bajo que condiciones
+IAM, politica de iam, documento quien puede hacer que sobre qeu recuros y de manera opcional bajo que condicione
 Ej: carlos, edita, instancias de vm, los dias de diario
 los permisos por norma, buena practica en grupos
 
@@ -298,3 +298,288 @@ Cada maquina virtual tienen un disco ssd local asociado al host fisio y temporal
 Preguntas:
 
 - Cuales las mejor forma para una
+
+## Google Kubernetes Engine
+
+Cluster: conjunto de maquinas
+
+Cluster donde puedes lanzar contendores
+
+Como va kubernetes:
+Tu defines lo que quieres y kubernetes se encarga de llegar a este estado, si mure va a intentar llevarlo a ese estado.
+
+kubectl - la linea de comandos de Kubernetes
+
+Pod es la unidad minima de Kubernetes, se componen de Pods
+Conjuntos de contenedores que estan dentor de la misma red
+
+Sidecar -
+
+Service: se compone de Pods, y dentro del spec tienes un selector, app: frontend
+
+El ingress tambien se configura por servicio, donde defines en el backend el serviceName y el servicePort
+
+en GKE que es el Kubernetes de google que ayuda en la gestión del cluster
+
+Los Node Pools son grupos de nodos que tienen la misma configuración de maquinas virtuales
+
+y la diferencia con los pods es que los nodos son maquinas virtuales y los pods son contenedores que corren en los nodos
+
+**Cluster autoscaler**: si necesitas mas nodos, los crea, si no los borra.
+El Horizontal Pod Autoscaler **HPA**, el autoscaler de los pods, si necesitas mas pods, los crea, si no los borra. Pero si no hay espacio para que esto ocurra, el cluster autoscaler no puede hacer nada. Están relacionados pero no dependen el uno del otro.
+Vertical Pod Autoscaler **VPA**: si necesitas mas recursos, aumenta los recursos, si no los disminuye.
+
+### GKE autopilot
+
+Hasta aqui GKE da cosas, pero tu tienes que gestionar node pools, autoscaling, logging, monitoring, DNS, ...
+
+Pero con GKE autopilot, google se encarga de todo esto, y tu solo te preocupas de los contenedores.
+
+## Cloud Run
+
+Es un servicio de contenedores sin servidor
+
+Se ejecuta sobre kubernetes, pero tu no te preocupas de nada
+
+...
+
+## App Engine
+
+El antecesor a Cloud Run
+
+Pregunta:  Si se sale de lo estandar, usar App Engine tipo Flexible
+
+Deprecarlo, por Cloud Run
+
+## Cloud Functions
+
+Funciones sin servidor
+
+Bajo un evento se ejecuta una función, pasa A, B ocurre entonce C.
+
+Event driver serverless compute platform
+
+El modelo de pago es el mismo de cloud run.
+
+Diferencia con cloud run, que cloud run es para contenedores y cloud functions es para funciones o codigo concreto sin necesidad de contenedorizar.
+
+No tiene tanta flexibilidad como cloud run, pero es mas facil de usar.
+
+Tienes limites de tiempo de ejecución. Mure por definición. Si necesitas mas tiempo, usar cloud run. Esta pensado para cosas rapidas, algo rapido.
+
+--
+
+## Databases en GCP
+
+Cloud SQL:
+
+- as
+
+AlloyDB:
+
+- Separa la capa de computo de la capa de almacenamiento. Si quisieras
+- Motor columnas, todos los datos de una columna juntos, para analisis. Agrerado de datos, no transaccional.
+- cache en cada maquina
+- Postgres sobre vitaminado
+- Cargas de trabajo compatibles con postgres. Gente de Oracle. Consultas analiticas sin datawarehouse.
+- Tener una replica en allow es mas rapido que en cloud sql
+
+Cloud Spanner
+
+- invento google, no suele caer
+- si comparas sql vs nosql son paradigmas distintos
+- Relation semantics, Schemas, ACID, transacciones, SQL unido a la escalabilidad horizontal y global
+- con 99.999% de disponibilidad, totalmente manejado
+- RDBMS.
+- YouTube, Gmail...
+- Casos de usos: consistencia fuerte y alta disponibilidad. Banca, tieneda de productos de venta global.
+
+Firestore:
+
+- Base de datos documental. Serverless.
+- No schema,
+- Era un producto de firebase
+
+Big table:
+
+- clave valor de columna ancha, no fuerza a tener mismas columnas
+- Casos de usos: contadores, IOT, anuncios con latencias bajas.
+
+Slide de comparación de bases de datos
+
+![Optional Image Description](https://storage.googleapis.com/gweb-cloudblog-publish/images/Which-Database_v03-22-23.max-2000x2000.jpg)
+
+Tips:
+
+- Global
+- big table para iot o sensores,
+
+### Pub/Sub
+
+Que es: Sistema asincrono para conectar productores y consumidores
+
+- Solo envia, no transforma los mensajes
+- Broker de mensajes y colas
+
+Resuelve:
+
+- Diferente velocidad entre productor y consumidor
+- Diferente velocidad entre consumidores
+- absorber picos de trafico
+- no perder mensajes
+
+Ciclo de vida: publicador que lanza el mensaje, el mensaje se va a un topic, y el consumidor se suscribe a ese tema. Tu creas una subcripcion a un tema si te vas a suscribir a ese tema. Tiempo de vida de los mensajes: 7 dias en el message storage. Y el ack, cuando te llega el mensaje, haces el ack para que no vuelva a llegar.
+
+Casos de uso:
+
+- IoT, sensores
+- Gmail tiene esto, para que no pierdas mensajes
+- totalmente manejado
+- Scala, fiable esta en todas las regiones y es global de cualquier region a cualquier region.
+- Perfomance: 1 millon de mensajes por segundo.
+- Coste pago por uso.
+- hasta 100gbs
+- 3x3 replicacion hasta 7 dias
+- cifran en transito y en reposo
+  
+Patrones:
+
+- Fan out: un mensaje a muchos consumidores
+- Fan in: muchos mensajes a un consumidor
+- Pub/Sub to Cloud Storage: cuando llega un mensaje, se guarda en un bucket de cloud storage para analisis posterior o para guardar el mensaje para siempre. Ej: para cumplir con la ley de retención de datos.
+
+Idependientemente de cuanto mensajes haya los envia a cada subcripcion. y cada uno se lleva 1 mesnaje. vs dos subcripciones que se lleva el mensaje los dos.
+
+Push vs pull, admiten los dos. Push es mas facil de usar, pero pull es mas escalable.
+
+Simple pubsub look like. Caso de HR. HR system enviar un evento de message a un topic, y el cada uno de los sitemas que necesitan ese evento se suscriben a ese topic, y en cuanto llega el mensaje, lo procesan.
+
+Puedne llegan mensajes duplicados, pero tienes menos latencias, pero si lo activas, pierdes latencia
+
+revisar la parte del exacly once delivery. Solo se puede en una region.
+Ahora tambien se puede que se envien en orden.
+
+### BigQuery
+
+No sale mucho, siempre que haya algo de analica, siempre bigquery, proque no hya mcuho de data
+
+es un datawarehouse, querys analiticas.
+
+unico, es serverless. admite real time.
+
+- ML integrado
+- BI engine
+- Exabyte scale
+- datos cifrados en reposo y en transito
+- Solo pagas por las querys que haces, no por la infraestructura
+  
+Porque es tan rapido, y tieee tanta fama
+
+- storage vs compute separado. Storage es muy barato.
+- Puedes tener hasta historico
+- ingestar es gratis en batch
+
+Ingesta de datos:
+
+- Batch
+  - Dataflow
+  - Pub/Sub
+- Querys
+- Data transfer service: para traer datos de otros servicios de google o de otros proveedores
+- 3rd party
+
+costes de ingesta + costes de querys + costes de almacenamiento
+
+Almacenamiento columnar. Es mas rapido.
+
+Storage optimizado, buenas practicas. A los 90 dias de un dato sin tocar, baja a la mitad. Cuando se resetea, cargas datos, copias, query y cuando haces streaming.
+
+Limitless features:
+
+- Particionado y clustering
+
+Asi solo lees por particion, y no por todo el dataset y asi ahorras costes
+clustering, aparte de columnar puedes ordenar por id de clientes, mas rapido
+
+reclusterizar, es free, mainetenerlo es gratis, automatico
+
+Caso real sin particionar, en filtrar 4$ vs 0.01$
+
+Limite de 4000 particiones por tabla
+beneficios de particionar
+No particiones si neceistas usar los datos.
+Clusterizar siempre, va mejor con LIMIT clauses, cuidado con las preguntas porque a veces usar el limit no afecta porque se lee todo.
+
+En bigquery puedes tener columnas nested, y puedes hacer querys sobre ellas sin tener que hacer joins
+
+- una reduccion de un 37% menos de coste
+
+Query cache: si haces la misma query, varias veces, la segunda vez es mas rapida. La cache se invalida cuando hay datos nuevos. Si compañero hace una query, le cuesta. La cache es por cuenta.
+
+Mayor interoperalidad: con otros servicios de google, con otros proveedores, con otros servicios de google cloud.
+
+- Storage federation y Database federation, es decir, puedes lanzar querys a otros servicios de google cloud, o a otros proveedores, o a otros servicios de google cloud.
+
+BigQuery ML: machine learning en bigquery, sin tener que mover los datos, y sin tener que mover los datos a un modelo. Puedes hacer modelos de regresión, clasificación, clustering, forecasting. Tienes que tener Vertex AI para hacer modelos mas complejos y hay un pricing espacial.
+
+- Buil-in models
+- Feature
+- MLops
+- AI/ML applications
+- Motor de inferencia
+
+Casos de usos y beneficios: Gente, coste y complejidad y seguridad
+
+### Otros servicios de analitica
+
+#### dataflow
+
+Transformar datos en tiempo real o batch
+
+- Servicio sobre Apache Beam
+- millones de queries por segundo
+- totalmente manejado
+- Conectar data source: Pub/Sub, BigQuery, Cloud Storage, con target sources
+
+Que es un pipeline: Esto es de apache beam. Pipeline: source, Ptransform, Pcollection, Sink. Todo esto de la P es porque es en paralelo.
+
+dataflow pipelen, python, java, node. para integrar con otros servicios de google cloud es muy facil, p.apply(PubSubIO.Read().from("topic")
+
+Ventanas fijas: Cada 5 mensajes haz la transformacion
+ventanas deslizantes:
+ventanas de sesion: Por usuario, por ejemplo
+
+#### dataproc
+
+Hadoop y Spark
+
+Traerte tus cluster de hadoop.
+
+Hadoop manjeado. serveless or compute. no lock in, integrado.
+
+ventajas de on-premise vs compute vs dataproc
+
+Cluster flexibles, autoscaling, integracion con otros servicios de google cloud
+
+Te creas cluster muy facil para cada trabajo, y luego lo borras. ETLs de mapreduce, spark, hive, ML
+
+#### datafusion
+
+Basado en cdap, que es hacer pipelines de datos de manera visual, muy sencillo.
+
+### Composer
+
+Cluster de Airflow de manera sencilla
+
+- Orquestar pipelines de datos de dataproc
+
+## Samples Questions
+
+100TB de datos no relaciones, bigtable en vez de bigquery por la cantidad de teras
+migrar de on-premises a cloud uyn mysql, cloud sql
+base de datos, escale gb, datos relaciones, escalado horizontal, Cloud Spanner.
+10TB en bigQuery hjay spike enorme en querys, columnas que quieres.
+
+- no selector en bigquery
+20tb datos no acceder high, minimo precio, datos accedidos un par de veces al año, coldline porque es cada 90 dias.
+applicacion acelerar la eficiencia de productos hacer sinks a aun sitio. Pub/Sub a Cloud Storage por que los logs solo se exportan a BigQuery or Pub/Sub
