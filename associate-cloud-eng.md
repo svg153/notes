@@ -583,3 +583,79 @@ base de datos, escale gb, datos relaciones, escalado horizontal, Cloud Spanner.
 - no selector en bigquery
 20tb datos no acceder high, minimo precio, datos accedidos un par de veces al año, coldline porque es cada 90 dias.
 applicacion acelerar la eficiencia de productos hacer sinks a aun sitio. Pub/Sub a Cloud Storage por que los logs solo se exportan a BigQuery or Pub/Sub
+
+## Consejos para el examen de la certificación
+
+Perder el miedo la proceso y al examen.
+
+Si suspendes tienes unas restricciones
+
+- TBC
+
+| Level | Description | Duration | Cost | Questions | Languages |
+|-------|-------------|----------|------|-----------|-----------|
+| Foundational | Validate broad knowledge of cloud services | 90 min | 99$ + tax | 50 - 60 questions, multiple choice, multiple select | English, Japanese |
+| Associate | Validate fundamental skills to deploy and maintain cloud solutions | 2 hours | 125$ + tax | 50 - 60 questions, multiple choice, multiple select | English, Japanese, Spanish, Portuguese |
+| Professional | Validate key technical job functions and advanced skills | 2 hours | 200$ + tax | 50 - 60 questions, multiple choice, multiple select | English, Japanese* |
+
+En marzo del 27 de 2024
+
+Se abre un nuevo examen de certificación Professional Cloud Developer (Beta)
+
+- 3 horas
+- 120
+- 70 - 75 multiple choice, multiple select questions
+- English
+
+Decidir como te examinas, en casa o en un centro de examen.
+
+on site:
+
+- Madrid hay 4 centros de exámenes, technoform, prometric, pearson vue, ...
+- Los horarios son bastante limitados, de 9:00 a 17:15
+- Bueno que tiene, el proceso es mucho mas sencillo, te registras y te envian un codogp, te presentas 15 min antes, dos ids, primaria (DNI, oficiales) y secundaria (tarjeta de credito, biblioteca, ...)
+- No puedes pasar dentro con nada, a veces hay taquillas, para dejar las cosas, pero depende de la demanda.
+
+Remoto:
+
+- Proceso para examintarte online, te registras, tienes multitud de horaios. Requisitos: entornos tranquilo, sin ruido, durante todo el examen vas a estar vigilado y grabado, para que no te lean las preguntas. Vas a tener que enseñar la habitación, la mesa, el suelo. Instalar un software que te va a bloquear todo los programas, salvo el navegador.
+- Verificación de identidad previo al examen.
+- Lanzarlo desde el entorno, y se activa 10 min antes de la hora del examen. Aunque tu tengas una hora, hay una serie limitadas de personas controlando, puede que pase la hora de inicio, pero no cuenta. No hace falta dos autorizaciones, solo una.
+
+En cualqueir momento puedes volver a cualquier pregunta.
+Haz una pasada por todas, si eso, continua y luego vulves a las que no has respondido.
+El de arquitec es el unico que mantiene los casos de estudio: Son preguntas que te dan un caso de estudio y luego te hacen preguntas sobre el caso de estudio. Familiarizate con los casos de uso típicos, y asi las respuestas que cojamos tiene que estar de acuerdo con el caso de uso.
+
+- Ejemplo: casos de uso de preferencia de open source, entonces aunque la respuesta sea de google con una tecnologia que cuadra perfectamente, habria que elegir la de open source.
+
+El resultado final, cuando acabas te da una aproximación, te llega una semana despues, no te dijen nada más, aprobado o suspendido.
+
+cloud.google.com/learn/certification
+
+- Guides, de cloud engineer. Porcentaje de peso por cada bloque.
+
+<https://cloudskillsboost.google/paths/11>
+<https://github.com/sathishvj/awesome-gcp-certifications>
+
+<https://cp.certmetrics.com/google/en/login>
+
+Si, suspendes, ahora en google tienen un portal que te dice las partes que tienes que mejorar.
+
+Todos los examen duran 3 años
+
+Codigo de renovacion de certificación, o para una segunda certificación: 50% de descuento.
+
+puedes pedir una extension de tiempo si no es tu idioma nativo.
+
+## Ejemplo de preguntas
+
+- 3 tipos de roles, roles basicos (primitivos, owners, viewer, writer...), roles predefinidos, roles personalizados
+- Multi-AZ, alta disponibilidad generas un standby y hace un failover. Set Up read replicas, para que las lecturas se hagan en las replicas y no en la principal.
+- firewall gestionados que permite conexiones entrantes, permitir una regla solo si no hay otra: Prioridad, con el numero mas bajo es la que se aplica primero. 65535 es la ultima, 2^16
+- que commando metadata de una instancia de VM: curl <http://metadata.google.internal/computeMetadata/v1/>
+  - buena practica asocial la google account a una service account, token temporal. Los sdks de GCP, ya lo hacen por ti.
+- nueva version de app engine para solo el 1% de los usuarios. Traffic Splitting, para que solo el 1% de los usuarios vean la nueva version.
+- Capcidad disponible de una manage instance group, no baja con una nueva version: Rolling update, poniendo el maxSurge set a 1 y el maxUnavailable a 0, solo va de una en una, y no admites que no haya ninguna disponible.
+- Requistos, base de usuarios desconocidos, database soluction que puede escalar con cambios minimos, es base de datos relacional: Cloud Spanner
+
+bit.ly/gcp-ace-test
