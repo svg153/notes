@@ -87,7 +87,7 @@ Firewall: determinar que tráfico entra y sale de la VPC. Reglas de firewall. de
 - Regla de firewall a maquinas con autoscaling, se la da la regla asociada a la service account de las maquinas
 - Buena practica es tener reglas de firewall por etiquetas o por service account
 - Las reglas son estáticas, si se quiere algo dinamico es una version mejorada que cuesta mas. Ej: Puede shacer como loimitar acceso de TOR
-  
+
 Cloud Armor (WAF y Shield en AWS):
 
 - Proteger contra ataques DDoS
@@ -123,7 +123,7 @@ Cloud Load Balancing:
 
 - Passthrough
     -
-  
+
   - TCP/UDP
   - SSL passthrough
   - Global external IP
@@ -441,7 +441,7 @@ Casos de uso:
 - hasta 100gbs
 - 3x3 replicacion hasta 7 dias
 - cifran en transito y en reposo
-  
+
 Patrones:
 
 - Fan out: un mensaje a muchos consumidores
@@ -472,7 +472,7 @@ unico, es serverless. admite real time.
 - Exabyte scale
 - datos cifrados en reposo y en transito
 - Solo pagas por las querys que haces, no por la infraestructura
-  
+
 Porque es tan rapido, y tieee tanta fama
 
 - storage vs compute separado. Storage es muy barato.
