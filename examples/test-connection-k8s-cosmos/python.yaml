@@ -63,13 +63,13 @@ data:
   infra.py: |
     import os, uuid
     from azure.storage.blob import BlobServiceClient
-    
+
     blob_service_client = BlobServiceClient.from_connection_string(os.getenv('CONNECTION_STRING'))
     containers = blob_service_client.list_containers()
-    for c in containers: 
+    for c in containers:
         container_name=c.name
         print("Container name: {}".format(container_name))
-        
+
         container_client = blob_service_client.get_container_client(container_name)
         blobs = container_client.list_blobs()
         for b in blobs:
@@ -89,7 +89,7 @@ data:
     try:
         database = client.CreateDatabase({'id': database_name})
     except errors.HTTPFailure:
-        database = client.ReadDatabase("dbs/" + database_name)  
+        database = client.ReadDatabase("dbs/" + database_name)
 
     import azure.cosmos.documents as documents
     container_definition = {
@@ -108,7 +108,7 @@ data:
                 "dbs/" + database['id'] + "/colls/" + container_definition['id'])
         else:
             raise e
-    
+
     print("Databases:")
     for d in client.list_databases():
         pprint.pprint(d)
