@@ -2,6 +2,7 @@
 
 [Fireship - 7 Database Paradigms](https://www.youtube.com/watch?v=W2Z7fbCLSTw)
 [BettaTech - 5 Bases de Datos que DEBERÍAS CONOCER (como Ingeniero de Software)](https://www.youtube.com/watch?v=vvsqP1f1JJs)
+[Comparison of 8 Cross-Platform Database APIs](https://app.daily.dev/posts/comparison-of-8-cross-platform-database-apis-ncbhq5ppk)
 
 ## Relacionales
 
