@@ -107,6 +107,12 @@ ADD: committed,blocked
 
 ### Proposal
 
+## Dependencies
+
+Automate dependabot dependencies, depending on the dependency name
+
+- <https://github.com/super-linter/super-linter/pull/4648>
+
 ## Workflow
 
 - update-changelog
