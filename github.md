@@ -68,6 +68,38 @@ All use the [GitHub API](https://docs.github.com/en/rest):
 - GitHub workflow to apply the github config terraform code
   - <https://github.com/concourse/governance/blob/master/.github/workflows/terraform.yml>
 
+## Repositorios con Wikis
+
+Migrar por lo que se decidió hacerlo manualmente.
+
+```bash
+PAT_TOKEN="ghp_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+ORIGIN_ORG="ORIGIN_ORG"
+TARGET_ORG="TARTGET_ORG"
+
+repos=(
+   "android"
+   "backend"
+   "web"
+)
+
+for r in "${repos[@]}"; do
+  echo "cloning $r"
+  git clone https://github.com/${ORIGIN_ORG}/$r.wiki.git
+done
+
+
+for r in "${repos[@]}"; do
+   echo "Migrating $r"
+   cd $r.wiki
+   branch_name=$(git rev-parse --abbrev-ref HEAD)
+   git remote remove new
+   git remote add new https://${PAT_TOKEN}@github.com/${TARGET_ORG}/$r.wiki.git
+   git push --set-upstream new $branch_name --force
+   cd ..
+done
+```
+
 [github/safe-settings]: https://github.com/github/safe-settings
 [probot/settings]: https://github.com/probot/settings
 [crossplane-contrib/provider-github]: https://github.com/crossplane-contrib/provider-github
