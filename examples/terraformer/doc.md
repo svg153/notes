@@ -37,7 +37,7 @@ mv terraformer-${PROVIDER}-linux-amd64 /usr/local/bin/terraformer
 
 Az cli on docker
 
-```
+```bash
 # https://mcr.microsoft.com/v2/azure-cli/tags/list
 docker run -it -v ${HOME}/.ssh:/root/.ssh mcr.microsoft.com/azure-cli:2.28.0
 
