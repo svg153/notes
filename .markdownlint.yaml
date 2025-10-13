@@ -1,1 +1,6 @@
-MD013: false
+MD013: false        # line length
+MD041: false        # first line should be a top-level heading
+MD025: false        # single H1 per document
+MD024: false        # no duplicate headings
+MD003: false        # heading style (setext vs atx)
+MD059: false        # descriptive link text
