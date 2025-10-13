@@ -10,20 +10,24 @@ Nota: todas las URLs y nombres han sido enmascarados. Sustituye `https://registr
 
 ## Cómo detectarlo rápidamente (qué ves al principio)
 
-1) La instalación se queda “pensando” o tarda demasiado
+1. La instalación se queda “pensando” o tarda demasiado
+
 - Al ejecutar `npm install` o `npm ci`, el progreso avanza muy lentamente o parece colgarse.
 
-2) `npm ping` falla con un error de certificados
+1. `npm ping` falla con un error de certificados
+
 - Ejemplo típico:
   - `npm notice PING https://registry.internal.example.com/npm-proxy`
   - `npm error code UNABLE_TO_GET_ISSUER_CERT_LOCALLY`
   - `npm error request to https://registry.internal.example.com/npm-proxy/-/ping failed, reason: unable to get local issuer certificate`
 
-3) `curl` al endpoint responde OK
+1. `curl` al endpoint responde OK
+
 - Una petición a metadatos devuelve 200 y tiempos razonables, lo que sugiere que la red y el DNS funcionan:
   - `curl -sk -o /dev/null -w 'HTTP %{http_code} total=%{time_total}s\n' https://registry.internal.example.com/npm-proxy/react`
 
 Interpretación rápida:
+
 - Si curl funciona pero npm falla con “unable to get local issuer certificate”, casi seguro es un problema de confianza de la CA en el contexto de Node/npm (no de conectividad).
 
 ---
@@ -40,11 +44,11 @@ Node/npm no confía en la CA corporativa utilizada por el endpoint del registry.
 
 ## Solución segura y persistente
 
-1) Exportar la CA del sistema para Node
+1. Exportar la CA del sistema para Node
 
 Añade a tu `~/.profile` (o shell de login):
 
-```
+```bash
 # >>> corp-npm-ca >>>
 export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt
 # <<< corp-npm-ca <<<
@@ -52,17 +56,17 @@ export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt
 
 Vuelve a cargar el entorno: `source ~/.profile`.
 
-2) Configurar npm con registry y CA
+1. Configurar npm con registry y CA
 
 En `~/.npmrc` (ajusta la URL del registry):
 
-```
+```ini
 registry = https://registry.internal.example.com/npm-proxy
 cafile = /etc/ssl/certs/ca-certificates.crt
 strict-ssl = true
 ```
 
-3) Verificar conectividad
+1. Verificar conectividad
 
 - `npm ping --registry=https://registry.internal.example.com/npm-proxy`
 - `npm view react version --registry=https://registry.internal.example.com/npm-proxy --silent`
@@ -84,6 +88,7 @@ Si todo está bien, deberías obtener un `PONG` y las instalaciones completarán
   - `npm ping --registry=https://registry.internal.example.com/npm-proxy`
 
 Determinando la causa exacta (paso a paso):
+
 - Si `npm ping` falla con UNABLE_TO_GET_ISSUER_CERT_LOCALLY pero `curl` funciona:
   - Verifica `npm config get strict-ssl` (debe ser true por seguridad) y `npm config get cafile` (si no está configurado, npm podría no usar el bundle de sistema).
   - Exporta temporalmente `NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt` y reintenta `npm ping`. Si ahora funciona, confirma que el problema era la confianza de la CA.
@@ -93,7 +98,7 @@ Determinando la causa exacta (paso a paso):
 
 Si estás bloqueado y necesitas desbloquearte para diagnosticar, puedes desactivar temporalmente la verificación SSL:
 
-```
+```bash
 npm config set strict-ssl false
 # ...pruebas rápidas...
 npm config set strict-ssl true
@@ -105,7 +110,7 @@ Es preferible instalar la CA correctamente (NODE_EXTRA_CA_CERTS y `cafile`) en l
 
 Puedes guardar este script y ejecutarlo para aplicar la configuración de forma idempotente (ajusta la URL del registry):
 
-```
+```bash
 #!/usr/bin/env bash
 set -euo pipefail
 REG="https://registry.internal.example.com/npm-proxy"
@@ -160,17 +165,20 @@ exit 0
 ## Checklist rápida (TL;DR)
 
 Detección
+
 - npm install/ci tarda demasiado o parece colgarse.
 - `npm ping --registry=https://registry.internal.example.com/npm-proxy` falla con `UNABLE_TO_GET_ISSUER_CERT_LOCALLY`.
 - `curl -sk` al endpoint devuelve 200 en tiempos razonables.
 
 Diagnóstico
+
 - `npm config get registry` confirma el registry esperado.
 - Revisar `HTTP(S)_PROXY`/`NO_PROXY` en el entorno.
 - DNS correcto: `getent hosts registry.internal.example.com`.
 - Latencia metadatos: `curl -sk -w 'HTTP %{http_code} total=%{time_total}s\n' -o /dev/null https://registry.internal.example.com/npm-proxy/react`.
 
 Solución
+
 - En `~/.profile`:
   - `export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt`
 - En `~/.npmrc`:
@@ -179,6 +187,7 @@ Solución
   - `strict-ssl = true`
 
 Verificación
+
 - `source ~/.profile` (o abre una nueva sesión).
 - `npm ping --registry=https://registry.internal.example.com/npm-proxy` → PONG.
 - `npm view react version --registry=https://registry.internal.example.com/npm-proxy --silent`.
