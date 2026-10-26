@@ -593,7 +593,7 @@ Si suspendes tienes unas restricciones
 - TBC
 
 | Level | Description | Duration | Cost | Questions | Languages |
-|-------|-------------|----------|------|-----------|-----------|
+| ------- | ------------- | ---------- | ------ | ----------- | ----------- |
 | Foundational | Validate broad knowledge of cloud services | 90 min | 99$ + tax | 50 - 60 questions, multiple choice, multiple select | English, Japanese |
 | Associate | Validate fundamental skills to deploy and maintain cloud solutions | 2 hours | 125$ + tax | 50 - 60 questions, multiple choice, multiple select | English, Japanese, Spanish, Portuguese |
 | Professional | Validate key technical job functions and advanced skills | 2 hours | 200$ + tax | 50 - 60 questions, multiple choice, multiple select | English, Japanese* |
